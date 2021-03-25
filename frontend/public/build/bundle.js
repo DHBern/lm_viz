@@ -564,7 +564,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (81:3) {#each data as point (point.Label)}
+    // (82:3) {#each data as point (point.Label)}
     function create_each_block(key_1, ctx) {
     	let tr;
     	let td0;
@@ -598,13 +598,13 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(td0, "class", "svelte-11xc8po");
-    			add_location(td0, file, 82, 5, 1926);
+    			add_location(td0, file, 83, 5, 3072);
     			attr_dev(td1, "class", "svelte-11xc8po");
-    			add_location(td1, file, 83, 5, 1955);
+    			add_location(td1, file, 84, 5, 3101);
     			attr_dev(tr, "id", /*point*/ ctx[12].Label);
     			attr_dev(tr, "class", "svelte-11xc8po");
     			toggle_class(tr, "selected", /*point*/ ctx[12].Label === /*selectedItem*/ ctx[1]);
-    			add_location(tr, file, 81, 4, 1754);
+    			add_location(tr, file, 82, 4, 2900);
     			this.first = tr;
     		},
     		m: function mount(target, anchor) {
@@ -643,7 +643,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(81:3) {#each data as point (point.Label)}",
+    		source: "(82:3) {#each data as point (point.Label)}",
     		ctx
     	});
 
@@ -657,16 +657,18 @@ var app = (function () {
     	let main;
     	let h1;
     	let t2;
+    	let p;
+    	let t4;
     	let div1;
     	let table;
     	let tr;
     	let th0;
-    	let t4;
-    	let th1;
     	let t6;
+    	let th1;
+    	let t8;
     	let each_blocks = [];
     	let each_1_lookup = new Map();
-    	let t7;
+    	let t9;
     	let div0;
     	let mounted;
     	let dispose;
@@ -687,37 +689,41 @@ var app = (function () {
     			t0 = space();
     			main = element("main");
     			h1 = element("h1");
-    			h1.textContent = "Hello!";
+    			h1.textContent = "Visualizing Language Models";
     			t2 = space();
+    			p = element("p");
+    			p.textContent = "Language models (e.g. character embeddings) are essential to succeed in NLP tasks. Especially when it comes to Part-of-Speech and Named Entity Recognition, tasks result in more precise models if supported by adequate language models already. Since the advent of word2vec and large transformer-based language models (such as BERT or GPT-3) a variety of specialized and fine-tuned language models is currently available. Despite the widespread use and the necessity when it comes to specific model training (e.g. for language entities with only sparse data), our understanding of the models themselves is limited at best. In order to strengthen our understanding of language models and to start the process of reflecting them, this challenge asks for creative ways of visualizing language models. We envision 3D-visualizations based on dimension reduction to identify the positioning of e.g. synonym/homonyms in vector spaces or listing of semantic fields (neighboring vector values). For context insensitive approaches (e.g. word2vec or GloVe) we imagine to use the fixed vectors and represent calculations in grids.";
+    			t4 = space();
     			div1 = element("div");
     			table = element("table");
     			tr = element("tr");
     			th0 = element("th");
     			th0.textContent = "Label";
-    			t4 = space();
+    			t6 = space();
     			th1 = element("th");
     			th1.textContent = "Sentence";
-    			t6 = space();
+    			t8 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t7 = space();
+    			t9 = space();
     			div0 = element("div");
     			if (script.src !== (script_src_value = "https://cdn.plot.ly/plotly-latest.min.js")) attr_dev(script, "src", script_src_value);
     			add_location(script, file, 69, 1, 1477);
     			attr_dev(h1, "class", "svelte-11xc8po");
     			add_location(h1, file, 73, 1, 1594);
-    			add_location(th0, file, 77, 4, 1661);
-    			add_location(th1, file, 78, 4, 1681);
-    			add_location(tr, file, 76, 3, 1651);
-    			add_location(table, file, 75, 2, 1639);
+    			add_location(p, file, 74, 1, 1633);
+    			add_location(th0, file, 78, 4, 2807);
+    			add_location(th1, file, 79, 4, 2827);
+    			add_location(tr, file, 77, 3, 2797);
+    			add_location(table, file, 76, 2, 2785);
     			attr_dev(div0, "id", "myDiv");
     			attr_dev(div0, "class", "viz");
-    			add_location(div0, file, 87, 2, 2017);
+    			add_location(div0, file, 88, 2, 3163);
     			attr_dev(div1, "class", "container svelte-11xc8po");
-    			add_location(div1, file, 74, 1, 1612);
+    			add_location(div1, file, 75, 1, 2758);
     			attr_dev(main, "class", "svelte-11xc8po");
     			add_location(main, file, 72, 0, 1585);
     		},
@@ -730,19 +736,21 @@ var app = (function () {
     			insert_dev(target, main, anchor);
     			append_dev(main, h1);
     			append_dev(main, t2);
+    			append_dev(main, p);
+    			append_dev(main, t4);
     			append_dev(main, div1);
     			append_dev(div1, table);
     			append_dev(table, tr);
     			append_dev(tr, th0);
-    			append_dev(tr, t4);
+    			append_dev(tr, t6);
     			append_dev(tr, th1);
-    			append_dev(table, t6);
+    			append_dev(table, t8);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(table, null);
     			}
 
-    			append_dev(div1, t7);
+    			append_dev(div1, t9);
     			append_dev(div1, div0);
     			/*div0_binding*/ ctx[7](div0);
 
