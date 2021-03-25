@@ -1,7 +1,7 @@
 <script>
-	import data from './input1.json';
-	import data2 from './input2.json';
-	import data3 from './input3.json';
+	import data from './json1.json';
+	import data2 from './json2.json';
+	import data3 from './json3.json';
 
 
 	const trace1 = {
@@ -25,9 +25,9 @@
 	};
 
 	const trace2 = {
-		x: data.map(o => o.Coords[0]),
-		y: data.map(o => o.Coords[1]),
-		z: data.map(o => o.Coords[2]),
+		x: data2.map(o => o.Coords[0]),
+		y: data2.map(o => o.Coords[1]),
+		z: data2.map(o => o.Coords[2]),
 		marker: {
 			size: 12,
 			line: {
@@ -39,15 +39,15 @@
 		mode: 'markers',
 		type: 'scatter3d',
 		name: 'Dataset 1',
-		text: [...data.map(o => o.Label)],
+		text: [...data2.map(o => o.Label)],
 		hovertemplate: '%{text}<extra></extra>',
 		showLegend: false
 	};
 
 	const trace3 = {
-		x: data.map(o => o.Coords[0]),
-		y: data.map(o => o.Coords[1]),
-		z: data.map(o => o.Coords[2]),
+		x: data3.map(o => o.Coords[0]),
+		y: data3.map(o => o.Coords[1]),
+		z: data3.map(o => o.Coords[2]),
 		marker: {
 			size: 12,
 			line: {
@@ -59,7 +59,7 @@
 		mode: 'markers',
 		type: 'scatter3d',
 		name: 'Dataset 1',
-		text: [...data.map(o => o.Label)],
+		text: [...data3.map(o => o.Label)],
 		hovertemplate: '%{text}<extra></extra>',
 		showLegend: false
 	};
@@ -104,15 +104,15 @@
 		selectedItem = "";
 	}
 
-	const selectPoint = (point, canvasRef) => {
-		let index = data.map(o => o.Label).indexOf(point);
-		let colorArray = new Array(data.length).fill("grey");
+	const selectPoint = (point, canvasRef, dataRef) => {
+		let index = dataRef.map(o => o.Label).indexOf(point);
+		let colorArray = new Array(dataRef.length).fill("grey");
 		colorArray[index] = "red";
 		Plotly.restyle(canvasRef, 'marker.color', [colorArray]);
 	}
 
-	const deselectPoint = (point, canvasRef) => {
-		let colorArray = new Array(data.length).fill('blue');
+	const deselectPoint = (point, canvasRef, dataRef) => {
+		let colorArray = new Array(dataRef.length).fill('blue');
 		Plotly.restyle(canvasRef, 'marker.color', [colorArray]);
 	}
 
@@ -132,7 +132,7 @@
 				<th>Sentence</th>
 			</tr>
 			{#each data as point (point.Label)}
-				<tr id="{point.Label}" class:selected={point.Label === selectedItem} on:mouseenter={() => selectPoint(point.Label, canvas1)} on:mouseleave={() => deselectPoint(point.Label, canvas1)}>
+				<tr id="{point.Label}" class:selected={point.Label === selectedItem} on:mouseenter={() => selectPoint(point.Label, canvas1, data)} on:mouseleave={() => deselectPoint(point.Label, canvas1, data)}>
 					<td>{point.Label}</td>
 					<td>{point.Legend}</td>
 				</tr>
@@ -147,7 +147,7 @@
 				<th>Sentence</th>
 			</tr>
 			{#each data2 as point (point.Label)}
-				<tr id="{point.Label}" class:selected={point.Label === selectedItem} on:mouseenter={() => selectPoint(point.Label, canvas2)} on:mouseleave={() => deselectPoint(point.Label, canvas2)}>
+				<tr id="{point.Label}" class:selected={point.Label === selectedItem} on:mouseenter={() => selectPoint(point.Label, canvas2, data2)} on:mouseleave={() => deselectPoint(point.Label, canvas2, data2)}>
 					<td>{point.Label}</td>
 					<td>{point.Legend}</td>
 				</tr>
@@ -162,7 +162,7 @@
 				<th>Sentence</th>
 			</tr>
 			{#each data3 as point (point.Label)}
-				<tr id="{point.Label}" class:selected={point.Label === selectedItem} on:mouseenter={() => selectPoint(point.Label, canvas3)} on:mouseleave={() => deselectPoint(point.Label, canvas3)}>
+				<tr id="{point.Label}" class:selected={point.Label === selectedItem} on:mouseenter={() => selectPoint(point.Label, canvas3, data3)} on:mouseleave={() => deselectPoint(point.Label, canvas3, data3)}>
 					<td>{point.Label}</td>
 					<td>{point.Legend}</td>
 				</tr>

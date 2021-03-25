@@ -434,113 +434,281 @@ var app = (function () {
         $inject_state() { }
     }
 
+    var data = [
+    	{
+    		Label: "stat0",
+    		Legend: "Von̄ dem guͦt daz koͧft ward von den Mùlner von Zurich diz ist als von den selben guͦt untz an die suͣ ✳ dn der nach stat ✳ Hartmann Muller ✳ git iii malterͣ ker en swin sol gelten ✳ v ✳ f xxx ✳ eyier Item Johannes̄ Scherzer iiii malterͣ",
+    		Coords: [
+    			-0.7463741898536682,
+    			1.6408809423446655,
+    			-0.9489734768867493
+    		]
+    	},
+    	{
+    		Label: "stat1",
+    		Legend: "ii fi Vo dez Mùliiz guͦt von Zurich von dem guͦt daz hie nach stat ✳ ze Sarmenstorf sol du eptissin Item ze Sarmenstorf",
+    		Coords: [
+    			-1.2432596683502197,
+    			1.7434635162353516,
+    			0.24499155580997467
+    		]
+    	},
+    	{
+    		Label: "stat2",
+    		Legend: "✳ und daz dis war si und stet belibe ✳ so geben wir disen brief unserr herschaft versigelt mit der stat insigel von Bruke ✳ sid wir niht eigen insigel haben",
+    		Coords: [
+    			1.4730240106582642,
+    			1.0938407182693481,
+    			-0.019849445670843124
+    		]
+    	},
+    	{
+    		Label: "stat3",
+    		Legend: "der vorgenanten lute bet ✳ haben unser stat insigel gehenket an disen brief ✳ ze einem offen urkunde ✳ der dingen die da vor geschriben stant",
+    		Coords: [
+    			2.6784493923187256,
+    			-0.3330732583999634,
+    			-0.26839956641197205
+    		]
+    	},
+    	{
+    		Label: "stat4",
+    		Legend: "oͧch des vorgenanden guͦtes des gnanden convenz rechter were vûr eigen und vogteige als da vorgeschriben stat an allen dien stetten da si werscheft bedurfen von mir oder minen erben✳",
+    		Coords: [
+    			-1.0097774267196655,
+    			-0.10090314596891403,
+    			2.454177141189575
+    		]
+    	},
+    	{
+    		Label: "stat5",
+    		Legend: "Chuͦnrad den schultheiss ✳ ✳ den rat und min buorger gemeinlich von Arowe daz si ir stat ingesigel ze einer gezûgsami dis koͧfes hant gehenckt an disen brief✳ Wir der Schultheiss",
+    		Coords: [
+    			2.013456344604492,
+    			0.2884417176246643,
+    			0.12911558151245117
+    		]
+    	},
+    	{
+    		Label: "stat6",
+    		Legend: "der rat und dû gemeinde vorgenande wan dir koͧf vor uns beschach und mit urteilde gevertgot wart nach nach unser stat gewonheit und rechte mit allen dien gedin̄gen als davor geschriben",
+    		Coords: [
+    			1.0492157936096191,
+    			-1.6573148965835571,
+    			0.12820087373256683
+    		]
+    	},
+    	{
+    		Label: "stat7",
+    		Legend: "stat dur bette des vorgenan Uͦlrich unsers burgers han wir gehencket unser stat ingesigel ze einer gezûgsami dis koͧfes und enkeinr werscheft anders sunderlich an disen",
+    		Coords: [
+    			-1.4408338069915771,
+    			-0.7561373710632324,
+    			-0.6320788264274597
+    		]
+    	},
+    	{
+    		Label: "stat8",
+    		Legend: "stat dur bette des vorgenan Uͦlrich unsers burgers han wir gehencket unser stat ingesigel ze einer gezûgsami dis koͧfes und enkeinr werscheft anders sunderlich an disen",
+    		Coords: [
+    			-1.4408338069915771,
+    			-0.7561373710632324,
+    			-0.6320788264274597
+    		]
+    	},
+    	{
+    		Label: "stat9",
+    		Legend: "stat hat gewert und ez in minen nutz han bekeret dez ich offenlich vergihe an disem briefe ✳ da von vergih oͧch ich ✳ daz ich",
+    		Coords: [
+    			-1.3330672979354858,
+    			-1.163061261177063,
+    			-0.45510628819465637
+    		]
+    	}
+    ];
+
+    var data2 = [
+    	{
+    		Label: "burg0",
+    		Legend: "Schenko ✳ R✳ Vinsler ✳ R✳ Sauenwiler ✳ burger ✳ ze Brugge ✳ Dietrich von Lenzeburg burg ✳ und andˀ erbˀ lùte genuͦg✳ ✳ ✳ ✳ Königsfelden",
+    		Coords: [
+    			1.3866446018218994,
+    			0.23537586629390717,
+    			-0.07335907965898514
+    		]
+    	},
+    	{
+    		Label: "burg1",
+    		Legend: "uf den guͤtern in dem Aygen ze Prukke ✳ uf dem Poͤz perg und anderswo als die brief sagent die der vorgnant unser oheim von Nellem - burg ✳ von",
+    		Coords: [
+    			0.5401713848114014,
+    			0.4722857177257538,
+    			0.20878253877162933
+    		]
+    	},
+    	{
+    		Label: "burg2",
+    		Legend: "darzuͤ verzigen si sich geistliches und welthes gerichtes ✳ gewonheit der stete und des landes fries rechtes burg rechtes und gemeinlich ✳ aller der dinge da mite",
+    		Coords: [
+    			-1.4340101480484009,
+    			1.8495968580245972,
+    			0.46855592727661133
+    		]
+    	},
+    	{
+    		Label: "burg3",
+    		Legend: "Allen den die disen brief ansehent oder hoͤrent lesen nu oder hie nach ✳ kûnden wir Johans Scherer schult heis ze der Nûwen Regensperg ✳ und die burger ✳ die ze der selben burg",
+    		Coords: [
+    			-0.3535294532775879,
+    			0.16077731549739838,
+    			-1.1568984985351562
+    		]
+    	},
+    	{
+    		Label: "burg4",
+    		Legend: "den grûnden ✳ in aller der weise ✳ alz unser getruwe ✳ bruͤder Peter von Stoffeln ✳ cômentûr ze Tannenfels Hug von Guͤten burg ✳ Wernher Truchsêtz von Rinvelden und Heinrich von Rinach ✳ sundernt und usscheident ✳ und under marksteinent",
+    		Coords: [
+    			1.4372605085372925,
+    			0.34989869594573975,
+    			0.6543382406234741
+    		]
+    	},
+    	{
+    		Label: "burg5",
+    		Legend: "✳ und von Uͦlrichen und Albrechten iren sunen✳ ein holtz genant ✳ die Eichals ✳ gelegen under unser burg Habsburg ✳ dasselb holtz und uns lehen ist ✳ daz wir zuͦ demselben kouffe ✳ unsern gunst und willen geben haben und",
+    		Coords: [
+    			-1.259008526802063,
+    			0.005437659565359354,
+    			-0.7085812091827393
+    		]
+    	},
+    	{
+    		Label: "burg6",
+    		Legend: "Königsfelden 333 wist umb j hus zuͦ Lentzbùrg ✳ K H 8 Staatsarchiv AARGAU 366 ✳ diz ist der prieff von dez huss wegenze Lentz burg ✳",
+    		Coords: [
+    			1.2450711727142334,
+    			0.044222552329301834,
+    			-0.09669719636440277
+    		]
+    	},
+    	{
+    		Label: "burg7",
+    		Legend: "den burg graben ze Habspurg den Ruͤdi Engelman buwet und gechdiet in daz burglehen ze Habspurg und der egenannten miner herrschaft von Oͤsterreich ledig ✳ worden ist von Heintzhn",
+    		Coords: [
+    			-1.0010827779769897,
+    			-1.1347391605377197,
+    			1.8226169347763062
+    		]
+    	},
+    	{
+    		Label: "burg8",
+    		Legend: "den lebenden ✳ und geben ouch in dem namen als davor wissentlich mit disem briefe ✳ fùr frye ledig eigen ✳ den frânwalt ✳ und das holtz ✳ gelegen under der burg ze Brunegg ✳ in Ergoͤw ✳ das man von alter nennet den Hag",
+    		Coords: [
+    			-0.6308287382125854,
+    			-0.8256052136421204,
+    			-0.6310507655143738
+    		]
+    	},
+    	{
+    		Label: "burg9",
+    		Legend: "und des ze urkùnd so henk ich der obgenanten lantvogt min eygen ingesigel an disen brief der geben ist ze Baden uff der burg an sant Margereten tag ✳ do man zalt von cristus gebùrt drùhundert ✳ eins und achtzig jar",
+    		Coords: [
+    			0.06931150704622269,
+    			-1.1572494506835938,
+    			-0.48770710825920105
+    		]
+    	}
+    ];
+
     var data3 = [
     	{
-    		Label: "donec0",
-    		Legend: "cras sem neque nec donec sit proin habitasse",
+    		Label: "schriben0",
+    		Legend: "✳ daz dis allez daz hie vor ge- schriben ist ✳ stête belibe ✳ dar uber geben wir disen brief ✳ versigelt ✳ mit ûnserm insigel ✳ und mit dem insigel bruͦder Heinrich von Talhein der ze den ziten",
     		Coords: [
-    			1705.66650390625,
-    			-566.0387573242188,
-    			-252.7596435546875
+    			2.057774543762207,
+    			0.20136170089244843,
+    			0.5314192771911621
     		]
     	},
     	{
-    		Label: "donec1",
-    		Legend: "convallis semper donec elementum quis nunc tincidunt ac",
+    		Label: "schriben1",
+    		Legend: "vorge- schriben guͦter ✳ nùzze ✳ und ✳ rehte ze beiden dorfren ✳ gar ✳ und genzlich wider geben ze loͤsende ✳ umb ✳ drissig ✳ mark",
     		Coords: [
-    			685.9598388671875,
-    			716.2805786132812,
-    			-322.40338134765625
+    			-0.38930603861808777,
+    			2.2972381114959717,
+    			-0.2487945407629013
     		]
     	},
     	{
-    		Label: "donec2",
-    		Legend: "donec justo volutpat in neque praesent varius ultrices",
+    		Label: "schriben2",
+    		Legend: "geistlicher froͧwen stat ze ire und ze ir nachkomen ✳ haͤnden dis nach ✳ ge- schriben gelt ✳ das lidig eigen ist und oͧch da fùr verkoͧft ist ✳ vier mùtt roggen ✳ ein malter habern ✳ ein halb swin sol oͧch ein",
     		Coords: [
-    			1100.7418212890625,
-    			-284.65631103515625,
-    			1279.4847412109375
+    			0.8916307687759399,
+    			0.03158307075500488,
+    			0.14593303203582764
     		]
     	},
     	{
-    		Label: "donec3",
-    		Legend: "donec nisi id velit turpis augue odio fermentum",
+    		Label: "schriben3",
+    		Legend: "wolt oder enmoͤht der sol und mach einen andern erbern knecht in die vorgenannte giselschaft schriben und legen der an siner stat ze glicher",
     		Coords: [
-    			111.3177490234375,
-    			69.48560333251953,
-    			1871.8463134765625
+    			-0.6792559027671814,
+    			-0.2869804799556732,
+    			0.8405468463897705
     		]
     	},
     	{
-    		Label: "donec4",
-    		Legend: "orci dui sociis ante donec diam ut pellentesque",
+    		Label: "schriben4",
+    		Legend: "und sinen bruͦder schriben mir järzitbuͦch und inen ir jarzitt began jerlich und ewenklich disen obgeschribenen spruch habend beid teil jetwedrer fùr sich und die sinen gelobt und verheissen by trùw an",
     		Coords: [
-    			-290.7204284667969,
-    			27.00762367248535,
-    			154.17181396484375
+    			-1.4592193365097046,
+    			-0.5030133128166199,
+    			1.7447373867034912
     		]
     	},
     	{
-    		Label: "donec5",
-    		Legend: "donec diam ornare donec nunc neque lectus erat",
+    		Label: "schriben5",
+    		Legend: "ùch darumb schriben das ich hoften ir kemind àn verzichen denn wir ân ùch als unseren oberen zù den sachen nitt geantwurten koͤnden noch zetüend wisten ✳ meinten si nitt getùn koͤnden sunder",
     		Coords: [
-    			831.0894165039062,
-    			913.0575561523438,
-    			1349.5433349609375
+    			-0.3245996832847595,
+    			-0.5933279991149902,
+    			-0.61163330078125
     		]
     	},
     	{
-    		Label: "donec6",
-    		Legend: "donec diam ornare donec nunc neque lectus erat",
+    		Label: "schriben6",
+    		Legend: "schriben lassen das si und irn teil der gùlt von junckher Albrecht von Rinach verwist stent nach innhalt disz briefs etcꝭ und die vi mütt kernengelts ist dahar ✳ bisz uff",
     		Coords: [
-    			1046.3797607421875,
-    			-246.20509338378906,
-    			-1643.5833740234375
+    			-0.9310423135757446,
+    			0.9522505402565002,
+    			-0.697503924369812
     		]
     	},
     	{
-    		Label: "donec7",
-    		Legend: "molestie aenean tortor vitae leo luctus lacus donec",
+    		Label: "schriben7",
+    		Legend: "und hieruff zuͦ merer sicherheit aller vor und nachgeschriben dingen ✳ so von uns an disen brieff ver⁊ schriben stàn ✳ so haben wir ✳ den vilgnannten unsern",
     		Coords: [
-    			-480.7792663574219,
-    			812.6502075195312,
-    			-1251.5196533203125
+    			1.3339762687683105,
+    			-0.23611211776733398,
+    			0.29407060146331787
     		]
     	},
     	{
-    		Label: "donec8",
-    		Legend: "nulla nulla id adipiscing et pede maecenas donec",
+    		Label: "schriben8",
+    		Legend: "ze Brugg die mich mitt Hansen Zuͦloͧf iren dickgenannten ir zuͦ vogt geben hand soͤlich des Stapfers angeben und schrift vorgemeldether in schriben lassen und anstatt und fùr als vor stat gelopt ✳ soͤlich lichen und",
     		Coords: [
-    			-327.870849609375,
-    			-813.2905883789062,
-    			-876.9862060546875
+    			-0.10398373752832413,
+    			-0.7050529718399048,
+    			-0.8058676719665527
     		]
     	},
     	{
-    		Label: "donec9",
-    		Legend: "odio non libero blandit nec tristique donec ligula",
+    		Label: "schriben9",
+    		Legend: "✳und her in schriben und setzen laͤssen ✳ ✳ item des ersten ein gross acker ist der lùtpreistrye widen hat vor Hansz Geiszlier umb den landteil litt an dem kilchweg",
     		Coords: [
-    			-1189.973876953125,
-    			604.2787475585938,
-    			171.2095489501953
-    		]
-    	},
-    	{
-    		Label: "donec10",
-    		Legend: "odio luctus arcu rutrum accumsan donec blandit id",
-    		Coords: [
-    			-1082.98291015625,
-    			-206.67515563964844,
-    			-1266.8076171875
-    		]
-    	},
-    	{
-    		Label: "donec11",
-    		Legend: "ipsum in sapien morbi donec augue nisi et",
-    		Coords: [
-    			-1123.65576171875,
-    			-1055.2132568359375,
-    			680.3493041992188
+    			-0.3959745168685913,
+    			-1.1579471826553345,
+    			-1.1929081678390503
     		]
     	}
     ];
@@ -602,13 +770,13 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(td0, "class", "svelte-11xc8po");
-    			add_location(td0, file, 135, 5, 4342);
+    			add_location(td0, file, 135, 5, 4392);
     			attr_dev(td1, "class", "svelte-11xc8po");
-    			add_location(td1, file, 136, 5, 4371);
+    			add_location(td1, file, 136, 5, 4421);
     			attr_dev(tr, "id", /*point*/ ctx[22].Label);
     			attr_dev(tr, "class", "svelte-11xc8po");
     			toggle_class(tr, "selected", /*point*/ ctx[22].Label === /*selectedItem*/ ctx[3]);
-    			add_location(tr, file, 134, 4, 4152);
+    			add_location(tr, file, 134, 4, 4190);
     			this.first = tr;
     		},
     		m: function mount(target, anchor) {
@@ -688,13 +856,13 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(td0, "class", "svelte-11xc8po");
-    			add_location(td0, file, 150, 5, 4832);
+    			add_location(td0, file, 150, 5, 4896);
     			attr_dev(td1, "class", "svelte-11xc8po");
-    			add_location(td1, file, 151, 5, 4861);
+    			add_location(td1, file, 151, 5, 4925);
     			attr_dev(tr, "id", /*point*/ ctx[22].Label);
     			attr_dev(tr, "class", "svelte-11xc8po");
     			toggle_class(tr, "selected", /*point*/ ctx[22].Label === /*selectedItem*/ ctx[3]);
-    			add_location(tr, file, 149, 4, 4642);
+    			add_location(tr, file, 149, 4, 4692);
     			this.first = tr;
     		},
     		m: function mount(target, anchor) {
@@ -774,13 +942,13 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(td0, "class", "svelte-11xc8po");
-    			add_location(td0, file, 165, 5, 5323);
+    			add_location(td0, file, 165, 5, 5401);
     			attr_dev(td1, "class", "svelte-11xc8po");
-    			add_location(td1, file, 166, 5, 5352);
+    			add_location(td1, file, 166, 5, 5430);
     			attr_dev(tr, "id", /*point*/ ctx[22].Label);
     			attr_dev(tr, "class", "svelte-11xc8po");
     			toggle_class(tr, "selected", /*point*/ ctx[22].Label === /*selectedItem*/ ctx[3]);
-    			add_location(tr, file, 164, 4, 5133);
+    			add_location(tr, file, 164, 4, 5197);
     			this.first = tr;
     		},
     		m: function mount(target, anchor) {
@@ -872,7 +1040,7 @@ var app = (function () {
     	let div4;
     	let mounted;
     	let dispose;
-    	let each_value_2 = data3;
+    	let each_value_2 = data;
     	validate_each_argument(each_value_2);
     	const get_key = ctx => /*point*/ ctx[22].Label;
     	validate_each_keys(ctx, each_value_2, get_each_context_2, get_key);
@@ -883,7 +1051,7 @@ var app = (function () {
     		each0_lookup.set(key, each_blocks_2[i] = create_each_block_2(key, child_ctx));
     	}
 
-    	let each_value_1 = data3;
+    	let each_value_1 = data2;
     	validate_each_argument(each_value_1);
     	const get_key_1 = ctx => /*point*/ ctx[22].Label;
     	validate_each_keys(ctx, each_value_1, get_each_context_1, get_key_1);
@@ -967,39 +1135,39 @@ var app = (function () {
     			t21 = space();
     			div4 = element("div");
     			if (script.src !== (script_src_value = "https://cdn.plot.ly/plotly-latest.min.js")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file, 121, 1, 2729);
+    			add_location(script, file, 121, 1, 2767);
     			attr_dev(h1, "class", "svelte-11xc8po");
-    			add_location(h1, file, 125, 1, 2846);
-    			add_location(p, file, 126, 1, 2885);
-    			add_location(th0, file, 130, 4, 4059);
-    			add_location(th1, file, 131, 4, 4079);
-    			add_location(tr0, file, 129, 3, 4049);
-    			add_location(table0, file, 128, 2, 4037);
+    			add_location(h1, file, 125, 1, 2884);
+    			add_location(p, file, 126, 1, 2923);
+    			add_location(th0, file, 130, 4, 4097);
+    			add_location(th1, file, 131, 4, 4117);
+    			add_location(tr0, file, 129, 3, 4087);
+    			add_location(table0, file, 128, 2, 4075);
     			attr_dev(div0, "id", "myDiv");
     			attr_dev(div0, "class", "viz");
-    			add_location(div0, file, 140, 2, 4433);
+    			add_location(div0, file, 140, 2, 4483);
     			attr_dev(div1, "class", "container svelte-11xc8po");
-    			add_location(div1, file, 127, 1, 4010);
-    			add_location(th2, file, 145, 4, 4548);
-    			add_location(th3, file, 146, 4, 4568);
-    			add_location(tr1, file, 144, 3, 4538);
-    			add_location(table1, file, 143, 2, 4526);
+    			add_location(div1, file, 127, 1, 4048);
+    			add_location(th2, file, 145, 4, 4598);
+    			add_location(th3, file, 146, 4, 4618);
+    			add_location(tr1, file, 144, 3, 4588);
+    			add_location(table1, file, 143, 2, 4576);
     			attr_dev(div2, "id", "myDiv2");
     			attr_dev(div2, "class", "viz");
-    			add_location(div2, file, 155, 2, 4923);
+    			add_location(div2, file, 155, 2, 4987);
     			attr_dev(div3, "class", "container svelte-11xc8po");
-    			add_location(div3, file, 142, 1, 4499);
-    			add_location(th4, file, 160, 4, 5039);
-    			add_location(th5, file, 161, 4, 5059);
-    			add_location(tr2, file, 159, 3, 5029);
-    			add_location(table2, file, 158, 2, 5017);
+    			add_location(div3, file, 142, 1, 4549);
+    			add_location(th4, file, 160, 4, 5103);
+    			add_location(th5, file, 161, 4, 5123);
+    			add_location(tr2, file, 159, 3, 5093);
+    			add_location(table2, file, 158, 2, 5081);
     			attr_dev(div4, "id", "myDiv3");
     			attr_dev(div4, "class", "viz");
-    			add_location(div4, file, 170, 2, 5414);
+    			add_location(div4, file, 170, 2, 5492);
     			attr_dev(div5, "class", "container svelte-11xc8po");
-    			add_location(div5, file, 157, 1, 4990);
+    			add_location(div5, file, 157, 1, 5054);
     			attr_dev(main, "class", "svelte-11xc8po");
-    			add_location(main, file, 124, 0, 2837);
+    			add_location(main, file, 124, 0, 2875);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1067,14 +1235,14 @@ var app = (function () {
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*data, selectedItem, selectPoint, canvas1, deselectPoint*/ 105) {
-    				each_value_2 = data3;
+    				each_value_2 = data;
     				validate_each_argument(each_value_2);
     				validate_each_keys(ctx, each_value_2, get_each_context_2, get_key);
     				each_blocks_2 = update_keyed_each(each_blocks_2, dirty, get_key, 1, ctx, each_value_2, each0_lookup, table0, destroy_block, create_each_block_2, null, get_each_context_2);
     			}
 
     			if (dirty & /*data2, selectedItem, selectPoint, canvas2, deselectPoint*/ 106) {
-    				each_value_1 = data3;
+    				each_value_1 = data2;
     				validate_each_argument(each_value_1);
     				validate_each_keys(ctx, each_value_1, get_each_context_1, get_key_1);
     				each_blocks_1 = update_keyed_each(each_blocks_1, dirty, get_key_1, 1, ctx, each_value_1, each1_lookup, table1, destroy_block, create_each_block_1, null, get_each_context_1);
@@ -1132,9 +1300,9 @@ var app = (function () {
     	validate_slots("App", slots, []);
 
     	const trace1 = {
-    		x: data3.map(o => o.Coords[0]),
-    		y: data3.map(o => o.Coords[1]),
-    		z: data3.map(o => o.Coords[2]),
+    		x: data.map(o => o.Coords[0]),
+    		y: data.map(o => o.Coords[1]),
+    		z: data.map(o => o.Coords[2]),
     		marker: {
     			size: 12,
     			line: {
@@ -1146,15 +1314,15 @@ var app = (function () {
     		mode: "markers",
     		type: "scatter3d",
     		name: "Dataset 1",
-    		text: [...data3.map(o => o.Label)],
+    		text: [...data.map(o => o.Label)],
     		hovertemplate: "%{text}<extra></extra>",
     		showLegend: false
     	};
 
     	const trace2 = {
-    		x: data3.map(o => o.Coords[0]),
-    		y: data3.map(o => o.Coords[1]),
-    		z: data3.map(o => o.Coords[2]),
+    		x: data2.map(o => o.Coords[0]),
+    		y: data2.map(o => o.Coords[1]),
+    		z: data2.map(o => o.Coords[2]),
     		marker: {
     			size: 12,
     			line: {
@@ -1166,7 +1334,7 @@ var app = (function () {
     		mode: "markers",
     		type: "scatter3d",
     		name: "Dataset 1",
-    		text: [...data3.map(o => o.Label)],
+    		text: [...data2.map(o => o.Label)],
     		hovertemplate: "%{text}<extra></extra>",
     		showLegend: false
     	};
@@ -1225,15 +1393,15 @@ var app = (function () {
     		$$invalidate(3, selectedItem = "");
     	}
 
-    	const selectPoint = (point, canvasRef) => {
-    		let index = data3.map(o => o.Label).indexOf(point);
-    		let colorArray = new Array(data3.length).fill("grey");
+    	const selectPoint = (point, canvasRef, dataRef) => {
+    		let index = dataRef.map(o => o.Label).indexOf(point);
+    		let colorArray = new Array(dataRef.length).fill("grey");
     		colorArray[index] = "red";
     		Plotly.restyle(canvasRef, "marker.color", [colorArray]);
     	};
 
-    	const deselectPoint = (point, canvasRef) => {
-    		let colorArray = new Array(data3.length).fill("blue");
+    	const deselectPoint = (point, canvasRef, dataRef) => {
+    		let colorArray = new Array(dataRef.length).fill("blue");
     		Plotly.restyle(canvasRef, "marker.color", [colorArray]);
     	};
 
@@ -1243,8 +1411,8 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
-    	const mouseenter_handler = point => selectPoint(point.Label, canvas1);
-    	const mouseleave_handler = point => deselectPoint(point.Label, canvas1);
+    	const mouseenter_handler = point => selectPoint(point.Label, canvas1, data);
+    	const mouseleave_handler = point => deselectPoint(point.Label, canvas1, data);
 
     	function div0_binding($$value) {
     		binding_callbacks[$$value ? "unshift" : "push"](() => {
@@ -1253,8 +1421,8 @@ var app = (function () {
     		});
     	}
 
-    	const mouseenter_handler_1 = point => selectPoint(point.Label, canvas2);
-    	const mouseleave_handler_1 = point => deselectPoint(point.Label, canvas2);
+    	const mouseenter_handler_1 = point => selectPoint(point.Label, canvas2, data2);
+    	const mouseleave_handler_1 = point => deselectPoint(point.Label, canvas2, data2);
 
     	function div2_binding($$value) {
     		binding_callbacks[$$value ? "unshift" : "push"](() => {
@@ -1263,8 +1431,8 @@ var app = (function () {
     		});
     	}
 
-    	const mouseenter_handler_2 = point => selectPoint(point.Label, canvas3);
-    	const mouseleave_handler_2 = point => deselectPoint(point.Label, canvas3);
+    	const mouseenter_handler_2 = point => selectPoint(point.Label, canvas3, data3);
+    	const mouseleave_handler_2 = point => deselectPoint(point.Label, canvas3, data3);
 
     	function div4_binding($$value) {
     		binding_callbacks[$$value ? "unshift" : "push"](() => {
@@ -1274,8 +1442,8 @@ var app = (function () {
     	}
 
     	$$self.$capture_state = () => ({
-    		data: data3,
-    		data2: data3,
+    		data,
+    		data2,
     		data3,
     		trace1,
     		trace2,
