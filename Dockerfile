@@ -16,8 +16,6 @@ COPY --chown=node:node node-app/index.js ./index.js
 
 COPY --chown=node:node frontend/public/ ./public
 
-EXPOSE 5000
-
 USER node
 
 CMD [ "node", "index.js"]
