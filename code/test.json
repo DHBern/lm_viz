@@ -1,0 +1,110 @@
+[
+    {
+        "Label": "donec0",
+        "Legend": "cras sem neque nec donec sit proin habitasse",
+        "Coords": [
+            1705.66650390625,
+            -566.0387573242188,
+            -252.7596435546875
+        ]
+    },
+    {
+        "Label": "donec1",
+        "Legend": "convallis semper donec elementum quis nunc tincidunt ac",
+        "Coords": [
+            685.9598388671875,
+            716.2805786132812,
+            -322.40338134765625
+        ]
+    },
+    {
+        "Label": "donec2",
+        "Legend": "donec justo volutpat in neque praesent varius ultrices",
+        "Coords": [
+            1100.7418212890625,
+            -284.65631103515625,
+            1279.4847412109375
+        ]
+    },
+    {
+        "Label": "donec3",
+        "Legend": "donec nisi id velit turpis augue odio fermentum",
+        "Coords": [
+            111.3177490234375,
+            69.48560333251953,
+            1871.8463134765625
+        ]
+    },
+    {
+        "Label": "donec4",
+        "Legend": "orci dui sociis ante donec diam ut pellentesque",
+        "Coords": [
+            -290.7204284667969,
+            27.00762367248535,
+            154.17181396484375
+        ]
+    },
+    {
+        "Label": "donec5",
+        "Legend": "donec diam ornare donec nunc neque lectus erat",
+        "Coords": [
+            831.0894165039062,
+            913.0575561523438,
+            1349.5433349609375
+        ]
+    },
+    {
+        "Label": "donec6",
+        "Legend": "donec diam ornare donec nunc neque lectus erat",
+        "Coords": [
+            1046.3797607421875,
+            -246.20509338378906,
+            -1643.5833740234375
+        ]
+    },
+    {
+        "Label": "donec7",
+        "Legend": "molestie aenean tortor vitae leo luctus lacus donec",
+        "Coords": [
+            -480.7792663574219,
+            812.6502075195312,
+            -1251.5196533203125
+        ]
+    },
+    {
+        "Label": "donec8",
+        "Legend": "nulla nulla id adipiscing et pede maecenas donec",
+        "Coords": [
+            -327.870849609375,
+            -813.2905883789062,
+            -876.9862060546875
+        ]
+    },
+    {
+        "Label": "donec9",
+        "Legend": "odio non libero blandit nec tristique donec ligula",
+        "Coords": [
+            -1189.973876953125,
+            604.2787475585938,
+            171.2095489501953
+        ]
+    },
+    {
+        "Label": "donec10",
+        "Legend": "odio luctus arcu rutrum accumsan donec blandit id",
+        "Coords": [
+            -1082.98291015625,
+            -206.67515563964844,
+            -1266.8076171875
+        ]
+    },
+    {
+        "Label": "donec11",
+        "Legend": "ipsum in sapien morbi donec augue nisi et",
+        "Coords": [
+            -1123.65576171875,
+            -1055.2132568359375,
+            680.3493041992188
+        ]
+    }
+]
