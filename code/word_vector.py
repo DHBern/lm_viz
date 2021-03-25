@@ -50,12 +50,12 @@ class Vectorizer(object):
         cursor = connection.cursor()
 
         if windowSize is None:
-            sentenceID = cursor.execute('SELECT sentenceID FROM woerter WHERE wordID= ?', (wordID,)).fetchall()[0]
-            sentence = dict(cursor.execute('SELECT wordID, word FROM woerter WHERE sentenceID= ?', (sentenceID[0],)).fetchall())
+            sentenceID = cursor.execute('SELECT sentence FROM dhViz_sentenceentry WHERE id= ?', (wordID,)).fetchall()[0]
+            sentence = dict(cursor.execute('SELECT id, word FROM dhViz_sentenceentry WHERE sentence= ?', (sentenceID[0],)).fetchall())
         else:
             start = wordID - np.floor(windowSize/2)
             print(start)
-            sentence = dict(cursor.execute('SELECT wordID, word FROM woerter WHERE wordID BETWEEN ? AND ?', (start, start+windowSize-1,)).fetchall())
+            sentence = dict(cursor.execute('SELECT id, word FROM dhViz_sentenceentry WHERE id BETWEEN ? AND ?', (start, start+windowSize-1,)).fetchall())
             print(sentence)
 
         sentence_str = " ".join(list(sentence.values()))
@@ -88,7 +88,7 @@ class Vectorizer(object):
         connection = sqlite3.connect(self.pathDB)
         cursor = connection.cursor()
 
-        words = cursor.execute('SELECT wordID FROM woerter WHERE word = ?', (word,)).fetchall()
+        words = cursor.execute('SELECT id FROM dhViz_sentenceentry WHERE word = ?', (word,)).fetchall()
         results = []
         
         connection.close()
@@ -145,6 +145,7 @@ class Vectorizer(object):
         json_data = []
         word_vecs = []
         reduced_vec = []
+        results = results[:10]
         for r in results:
                 word_vecs.append(r[2])
                 
