@@ -1,10 +1,11 @@
 <script>
-	import data from './input1.json';
+	import { onMount } from 'svelte';
+	import data from './test.json';
 
 	const trace1 = {
-		x: data.map(o => o.coords[0]),
-		y: data.map(o => o.coords[1]),
-		z: data.map(o => o.coords[2]),
+		x: data.map(o => o.Coords[0]),
+		y: data.map(o => o.Coords[1]),
+		z: data.map(o => o.Coords[2]),
 		marker: {
 			size: 12,
 			line: {
@@ -16,23 +17,41 @@
 		mode: 'markers',
 		type: 'scatter3d',
 		name: 'Dataset 1',
-		text: [...data.map(o => o.label)],
+		text: [...data.map(o => o.Label)],
 		hovertemplate: '%{text}<extra></extra>',
-		showlegend: false
+		showLegend: false
 	};
 
-	const layout = {margin: {
+	const layout = {
+		hovermode:'closest',
+		margin: {
 			l: 0,
 			r: 0,
 			b: 0,
 			t: 0
-		}};
+		}
+	};
 
 	let canvas;
+	let selectedItem = "";
 
 	const initializeViz = () => {
-		Plotly.newPlot(canvas, [trace1], layout);
+		Plotly.newPlot(canvas, [trace1], layout, {showSendToCloud: true});
+		let myPlot = document.getElementById('myDiv')
+		myPlot.on('plotly_hover', vizHover)
+		myPlot.on('plotly_unhover', vizUnhover)
 	}
+
+	function vizHover(event) {
+		if (selectedItem !== event.points[0].text){
+			selectedItem = event.points[0].text;
+		}
+	}
+
+	function vizUnhover(event) {
+		selectedItem = "";
+	}
+
 </script>
 
 <svelte:head>
@@ -47,14 +66,14 @@
 				<th>Label</th>
 				<th>Sentence</th>
 			</tr>
-			{#each data as point}
-				<tr>
-					<td>{point.label}</td>
-					<td>{point.legend}</td>
+			{#each data as point (point.Label)}
+				<tr id="{point.Label}" class:selected={point.Label === selectedItem}>
+					<td>{point.Label}</td>
+					<td>{point.Legend}</td>
 				</tr>
 			{/each}
 		</table>
-		<div class="viz" bind:this={canvas}></div>
+		<div id="myDiv" class="viz" bind:this={canvas}></div>
 	</div>
 </main>
 
@@ -86,7 +105,7 @@
 		min-height: 600px;
 	}
 
-	tr:hover td {
+	tr:hover td, .selected {
 		background-color: red;
 	}
 </style>
