@@ -1,2 +1,1190 @@
-var app=function(){"use strict";function e(){}function n(e){return e()}function t(){return Object.create(null)}function r(e){e.forEach(n)}function s(e){return"function"==typeof e}function i(e,n){return e!=e?n==n:e!==n||e&&"object"==typeof e||"function"==typeof e}function o(e,n){e.appendChild(n)}function a(e,n,t){e.insertBefore(n,t||null)}function d(e){e.parentNode.removeChild(e)}function l(e){return document.createElement(e)}function u(e){return document.createTextNode(e)}function c(){return u(" ")}function g(e,n,t,r){return e.addEventListener(n,t,r),()=>e.removeEventListener(n,t,r)}function h(e,n,t){null==t?e.removeAttribute(n):e.getAttribute(n)!==t&&e.setAttribute(n,t)}function b(e,n,t){e.classList[t?"add":"remove"](n)}let f;function m(e){f=e}const v=[],p=[],L=[],z=[],w=Promise.resolve();let y=!1;function k(e){L.push(e)}let x=!1;const C=new Set;function $(){if(!x){x=!0;do{for(let e=0;e<v.length;e+=1){const n=v[e];m(n),_(n.$$)}for(m(null),v.length=0;p.length;)p.pop()();for(let e=0;e<L.length;e+=1){const n=L[e];C.has(n)||(C.add(n),n())}L.length=0}while(v.length);for(;z.length;)z.pop()();y=!1,x=!1,C.clear()}}function _(e){if(null!==e.fragment){e.update(),r(e.before_update);const n=e.dirty;e.dirty=[-1],e.fragment&&e.fragment.p(e.ctx,n),e.after_update.forEach(k)}}const S=new Set;function H(e,n){e&&e.i&&(S.delete(e),e.i(n))}function M(e,n){e.d(1),n.delete(e.key)}function P(e,n,t,r,s,i,o,a,d,l,u,c){let g=e.length,h=i.length,b=g;const f={};for(;b--;)f[e[b].key]=b;const m=[],v=new Map,p=new Map;for(b=h;b--;){const e=c(s,i,b),a=t(e);let d=o.get(a);d?r&&d.p(e,n):(d=l(a,e),d.c()),v.set(a,m[b]=d),a in f&&p.set(a,Math.abs(b-f[a]))}const L=new Set,z=new Set;function w(e){H(e,1),e.m(a,u),o.set(e.key,e),u=e.first,h--}for(;g&&h;){const n=m[h-1],t=e[g-1],r=n.key,s=t.key;n===t?(u=n.first,g--,h--):v.has(s)?!o.has(r)||L.has(r)?w(n):z.has(s)?g--:p.get(r)>p.get(s)?(z.add(r),w(n)):(L.add(s),g--):(d(t,o),g--)}for(;g--;){const n=e[g];v.has(n.key)||d(n,o)}for(;h;)w(m[h-1]);return m}function A(e,n){-1===e.$$.dirty[0]&&(v.push(e),y||(y=!0,w.then($)),e.$$.dirty.fill(0)),e.$$.dirty[n/31|0]|=1<<n%31}function E(i,o,a,l,u,c,g=[-1]){const h=f;m(i);const b=i.$$={fragment:null,ctx:null,props:c,update:e,not_equal:u,bound:t(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(h?h.$$.context:[]),callbacks:t(),dirty:g,skip_bound:!1};let v=!1;if(b.ctx=a?a(i,o.props||{},((e,n,...t)=>{const r=t.length?t[0]:n;return b.ctx&&u(b.ctx[e],b.ctx[e]=r)&&(!b.skip_bound&&b.bound[e]&&b.bound[e](r),v&&A(i,e)),n})):[],b.update(),v=!0,r(b.before_update),b.fragment=!!l&&l(b.ctx),o.target){if(o.hydrate){const e=function(e){return Array.from(e.childNodes)}(o.target);b.fragment&&b.fragment.l(e),e.forEach(d)}else b.fragment&&b.fragment.c();o.intro&&H(i.$$.fragment),function(e,t,i,o){const{fragment:a,on_mount:d,on_destroy:l,after_update:u}=e.$$;a&&a.m(t,i),o||k((()=>{const t=d.map(n).filter(s);l?l.push(...t):r(t),e.$$.on_mount=[]})),u.forEach(k)}(i,o.target,o.anchor,o.customElement),$()}m(h)}var j=[{Label:"stat0",Legend:"Von̄ dem guͦt daz koͧft ward von den Mùlner von Zurich diz ist als von den selben guͦt untz an die suͣ ✳ dn der nach stat ✳ Hartmann Muller ✳ git iii malterͣ ker en swin sol gelten ✳ v ✳ f xxx ✳ eyier Item Johannes̄ Scherzer iiii malterͣ",Coords:[-.7463741898536682,1.6408809423446655,-.9489734768867493]},{Label:"stat1",Legend:"ii fi Vo dez Mùliiz guͦt von Zurich von dem guͦt daz hie nach stat ✳ ze Sarmenstorf sol du eptissin Item ze Sarmenstorf",Coords:[-1.2432596683502197,1.7434635162353516,.24499155580997467]},{Label:"stat2",Legend:"✳ und daz dis war si und stet belibe ✳ so geben wir disen brief unserr herschaft versigelt mit der stat insigel von Bruke ✳ sid wir niht eigen insigel haben",Coords:[1.4730240106582642,1.0938407182693481,-.019849445670843124]},{Label:"stat3",Legend:"der vorgenanten lute bet ✳ haben unser stat insigel gehenket an disen brief ✳ ze einem offen urkunde ✳ der dingen die da vor geschriben stant",Coords:[2.6784493923187256,-.3330732583999634,-.26839956641197205]},{Label:"stat4",Legend:"oͧch des vorgenanden guͦtes des gnanden convenz rechter were vûr eigen und vogteige als da vorgeschriben stat an allen dien stetten da si werscheft bedurfen von mir oder minen erben✳",Coords:[-1.0097774267196655,-.10090314596891403,2.454177141189575]},{Label:"stat5",Legend:"Chuͦnrad den schultheiss ✳ ✳ den rat und min buorger gemeinlich von Arowe daz si ir stat ingesigel ze einer gezûgsami dis koͧfes hant gehenckt an disen brief✳ Wir der Schultheiss",Coords:[2.013456344604492,.2884417176246643,.12911558151245117]},{Label:"stat6",Legend:"der rat und dû gemeinde vorgenande wan dir koͧf vor uns beschach und mit urteilde gevertgot wart nach nach unser stat gewonheit und rechte mit allen dien gedin̄gen als davor geschriben",Coords:[1.0492157936096191,-1.6573148965835571,.12820087373256683]},{Label:"stat7",Legend:"stat dur bette des vorgenan Uͦlrich unsers burgers han wir gehencket unser stat ingesigel ze einer gezûgsami dis koͧfes und enkeinr werscheft anders sunderlich an disen",Coords:[-1.4408338069915771,-.7561373710632324,-.6320788264274597]},{Label:"stat8",Legend:"stat dur bette des vorgenan Uͦlrich unsers burgers han wir gehencket unser stat ingesigel ze einer gezûgsami dis koͧfes und enkeinr werscheft anders sunderlich an disen",Coords:[-1.4408338069915771,-.7561373710632324,-.6320788264274597]},{Label:"stat9",Legend:"stat hat gewert und ez in minen nutz han bekeret dez ich offenlich vergihe an disem briefe ✳ da von vergih oͧch ich ✳ daz ich",Coords:[-1.3330672979354858,-1.163061261177063,-.45510628819465637]}],T=[{Label:"burg0",Legend:"Schenko ✳ R✳ Vinsler ✳ R✳ Sauenwiler ✳ burger ✳ ze Brugge ✳ Dietrich von Lenzeburg burg ✳ und andˀ erbˀ lùte genuͦg✳ ✳ ✳ ✳ Königsfelden",Coords:[1.3866446018218994,.23537586629390717,-.07335907965898514]},{Label:"burg1",Legend:"uf den guͤtern in dem Aygen ze Prukke ✳ uf dem Poͤz perg und anderswo als die brief sagent die der vorgnant unser oheim von Nellem - burg ✳ von",Coords:[.5401713848114014,.4722857177257538,.20878253877162933]},{Label:"burg2",Legend:"darzuͤ verzigen si sich geistliches und welthes gerichtes ✳ gewonheit der stete und des landes fries rechtes burg rechtes und gemeinlich ✳ aller der dinge da mite",Coords:[-1.4340101480484009,1.8495968580245972,.46855592727661133]},{Label:"burg3",Legend:"Allen den die disen brief ansehent oder hoͤrent lesen nu oder hie nach ✳ kûnden wir Johans Scherer schult heis ze der Nûwen Regensperg ✳ und die burger ✳ die ze der selben burg",Coords:[-.3535294532775879,.16077731549739838,-1.1568984985351562]},{Label:"burg4",Legend:"den grûnden ✳ in aller der weise ✳ alz unser getruwe ✳ bruͤder Peter von Stoffeln ✳ cômentûr ze Tannenfels Hug von Guͤten burg ✳ Wernher Truchsêtz von Rinvelden und Heinrich von Rinach ✳ sundernt und usscheident ✳ und under marksteinent",Coords:[1.4372605085372925,.34989869594573975,.6543382406234741]},{Label:"burg5",Legend:"✳ und von Uͦlrichen und Albrechten iren sunen✳ ein holtz genant ✳ die Eichals ✳ gelegen under unser burg Habsburg ✳ dasselb holtz und uns lehen ist ✳ daz wir zuͦ demselben kouffe ✳ unsern gunst und willen geben haben und",Coords:[-1.259008526802063,.005437659565359354,-.7085812091827393]},{Label:"burg6",Legend:"Königsfelden 333 wist umb j hus zuͦ Lentzbùrg ✳ K H 8 Staatsarchiv AARGAU 366 ✳ diz ist der prieff von dez huss wegenze Lentz burg ✳",Coords:[1.2450711727142334,.044222552329301834,-.09669719636440277]},{Label:"burg7",Legend:"den burg graben ze Habspurg den Ruͤdi Engelman buwet und gechdiet in daz burglehen ze Habspurg und der egenannten miner herrschaft von Oͤsterreich ledig ✳ worden ist von Heintzhn",Coords:[-1.0010827779769897,-1.1347391605377197,1.8226169347763062]},{Label:"burg8",Legend:"den lebenden ✳ und geben ouch in dem namen als davor wissentlich mit disem briefe ✳ fùr frye ledig eigen ✳ den frânwalt ✳ und das holtz ✳ gelegen under der burg ze Brunegg ✳ in Ergoͤw ✳ das man von alter nennet den Hag",Coords:[-.6308287382125854,-.8256052136421204,-.6310507655143738]},{Label:"burg9",Legend:"und des ze urkùnd so henk ich der obgenanten lantvogt min eygen ingesigel an disen brief der geben ist ze Baden uff der burg an sant Margereten tag ✳ do man zalt von cristus gebùrt drùhundert ✳ eins und achtzig jar",Coords:[.06931150704622269,-1.1572494506835938,-.48770710825920105]}],R=[{Label:"schriben0",Legend:"✳ daz dis allez daz hie vor ge- schriben ist ✳ stête belibe ✳ dar uber geben wir disen brief ✳ versigelt ✳ mit ûnserm insigel ✳ und mit dem insigel bruͦder Heinrich von Talhein der ze den ziten",Coords:[2.057774543762207,.20136170089244843,.5314192771911621]},{Label:"schriben1",Legend:"vorge- schriben guͦter ✳ nùzze ✳ und ✳ rehte ze beiden dorfren ✳ gar ✳ und genzlich wider geben ze loͤsende ✳ umb ✳ drissig ✳ mark",Coords:[-.38930603861808777,2.2972381114959717,-.2487945407629013]},{Label:"schriben2",Legend:"geistlicher froͧwen stat ze ire und ze ir nachkomen ✳ haͤnden dis nach ✳ ge- schriben gelt ✳ das lidig eigen ist und oͧch da fùr verkoͧft ist ✳ vier mùtt roggen ✳ ein malter habern ✳ ein halb swin sol oͧch ein",Coords:[.8916307687759399,.03158307075500488,.14593303203582764]},{Label:"schriben3",Legend:"wolt oder enmoͤht der sol und mach einen andern erbern knecht in die vorgenannte giselschaft schriben und legen der an siner stat ze glicher",Coords:[-.6792559027671814,-.2869804799556732,.8405468463897705]},{Label:"schriben4",Legend:"und sinen bruͦder schriben mir järzitbuͦch und inen ir jarzitt began jerlich und ewenklich disen obgeschribenen spruch habend beid teil jetwedrer fùr sich und die sinen gelobt und verheissen by trùw an",Coords:[-1.4592193365097046,-.5030133128166199,1.7447373867034912]},{Label:"schriben5",Legend:"ùch darumb schriben das ich hoften ir kemind àn verzichen denn wir ân ùch als unseren oberen zù den sachen nitt geantwurten koͤnden noch zetüend wisten ✳ meinten si nitt getùn koͤnden sunder",Coords:[-.3245996832847595,-.5933279991149902,-.61163330078125]},{Label:"schriben6",Legend:"schriben lassen das si und irn teil der gùlt von junckher Albrecht von Rinach verwist stent nach innhalt disz briefs etcꝭ und die vi mütt kernengelts ist dahar ✳ bisz uff",Coords:[-.9310423135757446,.9522505402565002,-.697503924369812]},{Label:"schriben7",Legend:"und hieruff zuͦ merer sicherheit aller vor und nachgeschriben dingen ✳ so von uns an disen brieff ver⁊ schriben stàn ✳ so haben wir ✳ den vilgnannten unsern",Coords:[1.3339762687683105,-.23611211776733398,.29407060146331787]},{Label:"schriben8",Legend:"ze Brugg die mich mitt Hansen Zuͦloͧf iren dickgenannten ir zuͦ vogt geben hand soͤlich des Stapfers angeben und schrift vorgemeldether in schriben lassen und anstatt und fùr als vor stat gelopt ✳ soͤlich lichen und",Coords:[-.10398373752832413,-.7050529718399048,-.8058676719665527]},{Label:"schriben9",Legend:"✳und her in schriben und setzen laͤssen ✳ ✳ item des ersten ein gross acker ist der lùtpreistrye widen hat vor Hansz Geiszlier umb den landteil litt an dem kilchweg",Coords:[-.3959745168685913,-1.1579471826553345,-1.1929081678390503]}];function D(e,n,t){const r=e.slice();return r[22]=n[t],r}function B(e,n,t){const r=e.slice();return r[22]=n[t],r}function N(e,n,t){const r=e.slice();return r[22]=n[t],r}function G(e,n){let t,s,i,f,m,v,p,L,z,w=n[22].Label+"",y=n[22].Legend+"";function k(){return n[7](n[22])}function x(){return n[8](n[22])}return{key:e,first:null,c(){t=l("tr"),s=l("td"),i=u(w),f=c(),m=l("td"),v=u(y),p=c(),h(s,"class","svelte-11xc8po"),h(m,"class","svelte-11xc8po"),h(t,"id",n[22].Label),h(t,"class","svelte-11xc8po"),b(t,"selected",n[22].Label===n[3]),this.first=t},m(e,n){a(e,t,n),o(t,s),o(s,i),o(t,f),o(t,m),o(m,v),o(t,p),L||(z=[g(t,"mouseenter",k),g(t,"mouseleave",x)],L=!0)},p(e,r){n=e,8&r&&b(t,"selected",n[22].Label===n[3])},d(e){e&&d(t),L=!1,r(z)}}}function O(e,n){let t,s,i,f,m,v,p,L,z,w=n[22].Label+"",y=n[22].Legend+"";function k(){return n[10](n[22])}function x(){return n[11](n[22])}return{key:e,first:null,c(){t=l("tr"),s=l("td"),i=u(w),f=c(),m=l("td"),v=u(y),p=c(),h(s,"class","svelte-11xc8po"),h(m,"class","svelte-11xc8po"),h(t,"id",n[22].Label),h(t,"class","svelte-11xc8po"),b(t,"selected",n[22].Label===n[3]),this.first=t},m(e,n){a(e,t,n),o(t,s),o(s,i),o(t,f),o(t,m),o(m,v),o(t,p),L||(z=[g(t,"mouseenter",k),g(t,"mouseleave",x)],L=!0)},p(e,r){n=e,8&r&&b(t,"selected",n[22].Label===n[3])},d(e){e&&d(t),L=!1,r(z)}}}function V(e,n){let t,s,i,f,m,v,p,L,z,w=n[22].Label+"",y=n[22].Legend+"";function k(){return n[13](n[22])}function x(){return n[14](n[22])}return{key:e,first:null,c(){t=l("tr"),s=l("td"),i=u(w),f=c(),m=l("td"),v=u(y),p=c(),h(s,"class","svelte-11xc8po"),h(m,"class","svelte-11xc8po"),h(t,"id",n[22].Label),h(t,"class","svelte-11xc8po"),b(t,"selected",n[22].Label===n[3]),this.first=t},m(e,n){a(e,t,n),o(t,s),o(s,i),o(t,f),o(t,m),o(m,v),o(t,p),L||(z=[g(t,"mouseenter",k),g(t,"mouseleave",x)],L=!0)},p(e,r){n=e,8&r&&b(t,"selected",n[22].Label===n[3])},d(e){e&&d(t),L=!1,r(z)}}}function U(n){let t,r,s,i,u,b,f,m,v,p,L,z,w,y,k,x,C,$,_,S,H,A,E,U,I,K,W,Z,q,J,F=[],Q=new Map,X=[],Y=new Map,ee=[],ne=new Map,te=j;const re=e=>e[22].Label;for(let e=0;e<te.length;e+=1){let t=N(n,te,e),r=re(t);Q.set(r,F[e]=G(r,t))}let se=T;const ie=e=>e[22].Label;for(let e=0;e<se.length;e+=1){let t=B(n,se,e),r=ie(t);Y.set(r,X[e]=O(r,t))}let oe=R;const ae=e=>e[22].Label;for(let e=0;e<oe.length;e+=1){let t=D(n,oe,e),r=ae(t);ne.set(r,ee[e]=V(r,t))}return{c(){t=l("script"),s=c(),i=l("main"),u=l("h1"),u.textContent="Visualizing Language Models",b=c(),f=l("p"),f.textContent="Language models (e.g. character embeddings) are essential to succeed in NLP tasks. Especially when it comes to Part-of-Speech and Named Entity Recognition, tasks result in more precise models if supported by adequate language models already. Since the advent of word2vec and large transformer-based language models (such as BERT or GPT-3) a variety of specialized and fine-tuned language models is currently available. Despite the widespread use and the necessity when it comes to specific model training (e.g. for language entities with only sparse data), our understanding of the models themselves is limited at best. In order to strengthen our understanding of language models and to start the process of reflecting them, this challenge asks for creative ways of visualizing language models. We envision 3D-visualizations based on dimension reduction to identify the positioning of e.g. synonym/homonyms in vector spaces or listing of semantic fields (neighboring vector values). For context insensitive approaches (e.g. word2vec or GloVe) we imagine to use the fixed vectors and represent calculations in grids.",m=c(),v=l("div"),p=l("table"),L=l("tr"),L.innerHTML="<th>Label</th> \n\t\t\t\t<th>Sentence</th>",z=c();for(let e=0;e<F.length;e+=1)F[e].c();w=c(),y=l("div"),k=c(),x=l("div"),C=l("table"),$=l("tr"),$.innerHTML="<th>Label</th> \n\t\t\t\t<th>Sentence</th>",_=c();for(let e=0;e<X.length;e+=1)X[e].c();S=c(),H=l("div"),A=c(),E=l("div"),U=l("table"),I=l("tr"),I.innerHTML="<th>Label</th> \n\t\t\t\t<th>Sentence</th>",K=c();for(let e=0;e<ee.length;e+=1)ee[e].c();W=c(),Z=l("div"),t.src!==(r="https://cdn.plot.ly/plotly-latest.min.js")&&h(t,"src","https://cdn.plot.ly/plotly-latest.min.js"),h(u,"class","svelte-11xc8po"),h(y,"id","myDiv"),h(y,"class","viz"),h(v,"class","container svelte-11xc8po"),h(H,"id","myDiv2"),h(H,"class","viz"),h(x,"class","container svelte-11xc8po"),h(Z,"id","myDiv3"),h(Z,"class","viz"),h(E,"class","container svelte-11xc8po"),h(i,"class","svelte-11xc8po")},m(e,r){o(document.head,t),a(e,s,r),a(e,i,r),o(i,u),o(i,b),o(i,f),o(i,m),o(i,v),o(v,p),o(p,L),o(p,z);for(let e=0;e<F.length;e+=1)F[e].m(p,null);o(v,w),o(v,y),n[9](y),o(i,k),o(i,x),o(x,C),o(C,$),o(C,_);for(let e=0;e<X.length;e+=1)X[e].m(C,null);o(x,S),o(x,H),n[12](H),o(i,A),o(i,E),o(E,U),o(U,I),o(U,K);for(let e=0;e<ee.length;e+=1)ee[e].m(U,null);o(E,W),o(E,Z),n[15](Z),q||(J=g(t,"load",n[4]),q=!0)},p(e,[n]){105&n&&(te=j,F=P(F,n,re,1,e,te,Q,p,M,G,null,N)),106&n&&(se=T,X=P(X,n,ie,1,e,se,Y,C,M,O,null,B)),108&n&&(oe=R,ee=P(ee,n,ae,1,e,oe,ne,U,M,V,null,D))},i:e,o:e,d(e){d(t),e&&d(s),e&&d(i);for(let e=0;e<F.length;e+=1)F[e].d();n[9](null);for(let e=0;e<X.length;e+=1)X[e].d();n[12](null);for(let e=0;e<ee.length;e+=1)ee[e].d();n[15](null),q=!1,J()}}}function I(e,n,t){const r={x:j.map((e=>e.Coords[0])),y:j.map((e=>e.Coords[1])),z:j.map((e=>e.Coords[2])),marker:{size:12,line:{color:"rgba(217, 217, 217, 0.14)",width:.5},opacity:.8},mode:"markers",type:"scatter3d",name:"Dataset 1",text:[...j.map((e=>e.Label))],hovertemplate:"%{text}<extra></extra>",showLegend:!1},s={x:T.map((e=>e.Coords[0])),y:T.map((e=>e.Coords[1])),z:T.map((e=>e.Coords[2])),marker:{size:12,line:{color:"rgba(217, 217, 217, 0.14)",width:.5},opacity:.8},mode:"markers",type:"scatter3d",name:"Dataset 1",text:[...T.map((e=>e.Label))],hovertemplate:"%{text}<extra></extra>",showLegend:!1},i={x:R.map((e=>e.Coords[0])),y:R.map((e=>e.Coords[1])),z:R.map((e=>e.Coords[2])),marker:{size:12,line:{color:"rgba(217, 217, 217, 0.14)",width:.5},opacity:.8},mode:"markers",type:"scatter3d",name:"Dataset 1",text:[...R.map((e=>e.Label))],hovertemplate:"%{text}<extra></extra>",showLegend:!1},o={hovermode:"closest",margin:{l:0,r:0,b:0,t:0}};let a,d,l,u="";function c(e){console.log(e),u!==e.points[0].text&&t(3,u=e.points[0].text)}function g(e){t(3,u="")}const h=(e,n,t)=>{let r=t.map((e=>e.Label)).indexOf(e),s=new Array(t.length).fill("grey");s[r]="red",Plotly.restyle(n,"marker.color",[s])},b=(e,n,t)=>{let r=new Array(t.length).fill("blue");Plotly.restyle(n,"marker.color",[r])};return[a,d,l,u,()=>{Plotly.newPlot(a,[r],o,{showSendToCloud:!0}),a.on("plotly_hover",c),a.on("plotly_unhover",g),Plotly.newPlot(d,[s],o,{showSendToCloud:!0}),d.on("plotly_hover",c),d.on("plotly_unhover",g),Plotly.newPlot(l,[i],o,{showSendToCloud:!0}),l.on("plotly_hover",c),l.on("plotly_unhover",g)},h,b,e=>h(e.Label,a,j),e=>b(e.Label,a,j),function(e){p[e?"unshift":"push"]((()=>{a=e,t(0,a)}))},e=>h(e.Label,d,T),e=>b(e.Label,d,T),function(e){p[e?"unshift":"push"]((()=>{d=e,t(1,d)}))},e=>h(e.Label,l,R),e=>b(e.Label,l,R),function(e){p[e?"unshift":"push"]((()=>{l=e,t(2,l)}))}]}return new class extends class{$destroy(){!function(e,n){const t=e.$$;null!==t.fragment&&(r(t.on_destroy),t.fragment&&t.fragment.d(n),t.on_destroy=t.fragment=null,t.ctx=[])}(this,1),this.$destroy=e}$on(e,n){const t=this.$$.callbacks[e]||(this.$$.callbacks[e]=[]);return t.push(n),()=>{const e=t.indexOf(n);-1!==e&&t.splice(e,1)}}$set(e){var n;this.$$set&&(n=e,0!==Object.keys(n).length)&&(this.$$.skip_bound=!0,this.$$set(e),this.$$.skip_bound=!1)}}{constructor(e){super(),E(this,e,I,U,i,{})}}({target:document.body})}();
+
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+var app = (function () {
+    'use strict';
+
+    function noop() { }
+    function add_location(element, file, line, column, char) {
+        element.__svelte_meta = {
+            loc: { file, line, column, char }
+        };
+    }
+    function run(fn) {
+        return fn();
+    }
+    function blank_object() {
+        return Object.create(null);
+    }
+    function run_all(fns) {
+        fns.forEach(run);
+    }
+    function is_function(thing) {
+        return typeof thing === 'function';
+    }
+    function safe_not_equal(a, b) {
+        return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
+    }
+    function is_empty(obj) {
+        return Object.keys(obj).length === 0;
+    }
+
+    function append(target, node) {
+        target.appendChild(node);
+    }
+    function insert(target, node, anchor) {
+        target.insertBefore(node, anchor || null);
+    }
+    function detach(node) {
+        node.parentNode.removeChild(node);
+    }
+    function destroy_each(iterations, detaching) {
+        for (let i = 0; i < iterations.length; i += 1) {
+            if (iterations[i])
+                iterations[i].d(detaching);
+        }
+    }
+    function element(name) {
+        return document.createElement(name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
+    function attr(node, attribute, value) {
+        if (value == null)
+            node.removeAttribute(attribute);
+        else if (node.getAttribute(attribute) !== value)
+            node.setAttribute(attribute, value);
+    }
+    function children(element) {
+        return Array.from(element.childNodes);
+    }
+    function toggle_class(element, name, toggle) {
+        element.classList[toggle ? 'add' : 'remove'](name);
+    }
+    function custom_event(type, detail) {
+        const e = document.createEvent('CustomEvent');
+        e.initCustomEvent(type, false, false, detail);
+        return e;
+    }
+
+    let current_component;
+    function set_current_component(component) {
+        current_component = component;
+    }
+
+    const dirty_components = [];
+    const binding_callbacks = [];
+    const render_callbacks = [];
+    const flush_callbacks = [];
+    const resolved_promise = Promise.resolve();
+    let update_scheduled = false;
+    function schedule_update() {
+        if (!update_scheduled) {
+            update_scheduled = true;
+            resolved_promise.then(flush);
+        }
+    }
+    function add_render_callback(fn) {
+        render_callbacks.push(fn);
+    }
+    let flushing = false;
+    const seen_callbacks = new Set();
+    function flush() {
+        if (flushing)
+            return;
+        flushing = true;
+        do {
+            // first, call beforeUpdate functions
+            // and update components
+            for (let i = 0; i < dirty_components.length; i += 1) {
+                const component = dirty_components[i];
+                set_current_component(component);
+                update(component.$$);
+            }
+            set_current_component(null);
+            dirty_components.length = 0;
+            while (binding_callbacks.length)
+                binding_callbacks.pop()();
+            // then, once components are updated, call
+            // afterUpdate functions. This may cause
+            // subsequent updates...
+            for (let i = 0; i < render_callbacks.length; i += 1) {
+                const callback = render_callbacks[i];
+                if (!seen_callbacks.has(callback)) {
+                    // ...so guard against infinite loops
+                    seen_callbacks.add(callback);
+                    callback();
+                }
+            }
+            render_callbacks.length = 0;
+        } while (dirty_components.length);
+        while (flush_callbacks.length) {
+            flush_callbacks.pop()();
+        }
+        update_scheduled = false;
+        flushing = false;
+        seen_callbacks.clear();
+    }
+    function update($$) {
+        if ($$.fragment !== null) {
+            $$.update();
+            run_all($$.before_update);
+            const dirty = $$.dirty;
+            $$.dirty = [-1];
+            $$.fragment && $$.fragment.p($$.ctx, dirty);
+            $$.after_update.forEach(add_render_callback);
+        }
+    }
+    const outroing = new Set();
+    function transition_in(block, local) {
+        if (block && block.i) {
+            outroing.delete(block);
+            block.i(local);
+        }
+    }
+
+    function destroy_block(block, lookup) {
+        block.d(1);
+        lookup.delete(block.key);
+    }
+    function update_keyed_each(old_blocks, dirty, get_key, dynamic, ctx, list, lookup, node, destroy, create_each_block, next, get_context) {
+        let o = old_blocks.length;
+        let n = list.length;
+        let i = o;
+        const old_indexes = {};
+        while (i--)
+            old_indexes[old_blocks[i].key] = i;
+        const new_blocks = [];
+        const new_lookup = new Map();
+        const deltas = new Map();
+        i = n;
+        while (i--) {
+            const child_ctx = get_context(ctx, list, i);
+            const key = get_key(child_ctx);
+            let block = lookup.get(key);
+            if (!block) {
+                block = create_each_block(key, child_ctx);
+                block.c();
+            }
+            else if (dynamic) {
+                block.p(child_ctx, dirty);
+            }
+            new_lookup.set(key, new_blocks[i] = block);
+            if (key in old_indexes)
+                deltas.set(key, Math.abs(i - old_indexes[key]));
+        }
+        const will_move = new Set();
+        const did_move = new Set();
+        function insert(block) {
+            transition_in(block, 1);
+            block.m(node, next);
+            lookup.set(block.key, block);
+            next = block.first;
+            n--;
+        }
+        while (o && n) {
+            const new_block = new_blocks[n - 1];
+            const old_block = old_blocks[o - 1];
+            const new_key = new_block.key;
+            const old_key = old_block.key;
+            if (new_block === old_block) {
+                // do nothing
+                next = new_block.first;
+                o--;
+                n--;
+            }
+            else if (!new_lookup.has(old_key)) {
+                // remove old block
+                destroy(old_block, lookup);
+                o--;
+            }
+            else if (!lookup.has(new_key) || will_move.has(new_key)) {
+                insert(new_block);
+            }
+            else if (did_move.has(old_key)) {
+                o--;
+            }
+            else if (deltas.get(new_key) > deltas.get(old_key)) {
+                did_move.add(new_key);
+                insert(new_block);
+            }
+            else {
+                will_move.add(old_key);
+                o--;
+            }
+        }
+        while (o--) {
+            const old_block = old_blocks[o];
+            if (!new_lookup.has(old_block.key))
+                destroy(old_block, lookup);
+        }
+        while (n)
+            insert(new_blocks[n - 1]);
+        return new_blocks;
+    }
+    function validate_each_keys(ctx, list, get_context, get_key) {
+        const keys = new Set();
+        for (let i = 0; i < list.length; i++) {
+            const key = get_key(get_context(ctx, list, i));
+            if (keys.has(key)) {
+                throw new Error('Cannot have duplicate keys in a keyed each');
+            }
+            keys.add(key);
+        }
+    }
+    function mount_component(component, target, anchor, customElement) {
+        const { fragment, on_mount, on_destroy, after_update } = component.$$;
+        fragment && fragment.m(target, anchor);
+        if (!customElement) {
+            // onMount happens before the initial afterUpdate
+            add_render_callback(() => {
+                const new_on_destroy = on_mount.map(run).filter(is_function);
+                if (on_destroy) {
+                    on_destroy.push(...new_on_destroy);
+                }
+                else {
+                    // Edge case - component was destroyed immediately,
+                    // most likely as a result of a binding initialising
+                    run_all(new_on_destroy);
+                }
+                component.$$.on_mount = [];
+            });
+        }
+        after_update.forEach(add_render_callback);
+    }
+    function destroy_component(component, detaching) {
+        const $$ = component.$$;
+        if ($$.fragment !== null) {
+            run_all($$.on_destroy);
+            $$.fragment && $$.fragment.d(detaching);
+            // TODO null out other refs, including component.$$ (but need to
+            // preserve final state?)
+            $$.on_destroy = $$.fragment = null;
+            $$.ctx = [];
+        }
+    }
+    function make_dirty(component, i) {
+        if (component.$$.dirty[0] === -1) {
+            dirty_components.push(component);
+            schedule_update();
+            component.$$.dirty.fill(0);
+        }
+        component.$$.dirty[(i / 31) | 0] |= (1 << (i % 31));
+    }
+    function init(component, options, instance, create_fragment, not_equal, props, dirty = [-1]) {
+        const parent_component = current_component;
+        set_current_component(component);
+        const $$ = component.$$ = {
+            fragment: null,
+            ctx: null,
+            // state
+            props,
+            update: noop,
+            not_equal,
+            bound: blank_object(),
+            // lifecycle
+            on_mount: [],
+            on_destroy: [],
+            on_disconnect: [],
+            before_update: [],
+            after_update: [],
+            context: new Map(parent_component ? parent_component.$$.context : []),
+            // everything else
+            callbacks: blank_object(),
+            dirty,
+            skip_bound: false
+        };
+        let ready = false;
+        $$.ctx = instance
+            ? instance(component, options.props || {}, (i, ret, ...rest) => {
+                const value = rest.length ? rest[0] : ret;
+                if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
+                    if (!$$.skip_bound && $$.bound[i])
+                        $$.bound[i](value);
+                    if (ready)
+                        make_dirty(component, i);
+                }
+                return ret;
+            })
+            : [];
+        $$.update();
+        ready = true;
+        run_all($$.before_update);
+        // `false` as a special case of no DOM component
+        $$.fragment = create_fragment ? create_fragment($$.ctx) : false;
+        if (options.target) {
+            if (options.hydrate) {
+                const nodes = children(options.target);
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.l(nodes);
+                nodes.forEach(detach);
+            }
+            else {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.c();
+            }
+            if (options.intro)
+                transition_in(component.$$.fragment);
+            mount_component(component, options.target, options.anchor, options.customElement);
+            flush();
+        }
+        set_current_component(parent_component);
+    }
+    /**
+     * Base class for Svelte components. Used when dev=false.
+     */
+    class SvelteComponent {
+        $destroy() {
+            destroy_component(this, 1);
+            this.$destroy = noop;
+        }
+        $on(type, callback) {
+            const callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
+            callbacks.push(callback);
+            return () => {
+                const index = callbacks.indexOf(callback);
+                if (index !== -1)
+                    callbacks.splice(index, 1);
+            };
+        }
+        $set($$props) {
+            if (this.$$set && !is_empty($$props)) {
+                this.$$.skip_bound = true;
+                this.$$set($$props);
+                this.$$.skip_bound = false;
+            }
+        }
+    }
+
+    function dispatch_dev(type, detail) {
+        document.dispatchEvent(custom_event(type, Object.assign({ version: '3.35.0' }, detail)));
+    }
+    function append_dev(target, node) {
+        dispatch_dev('SvelteDOMInsert', { target, node });
+        append(target, node);
+    }
+    function insert_dev(target, node, anchor) {
+        dispatch_dev('SvelteDOMInsert', { target, node, anchor });
+        insert(target, node, anchor);
+    }
+    function detach_dev(node) {
+        dispatch_dev('SvelteDOMRemove', { node });
+        detach(node);
+    }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+        const modifiers = options === true ? ['capture'] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        dispatch_dev('SvelteDOMAddEventListener', { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev('SvelteDOMRemoveEventListener', { node, event, handler, modifiers });
+            dispose();
+        };
+    }
+    function attr_dev(node, attribute, value) {
+        attr(node, attribute, value);
+        if (value == null)
+            dispatch_dev('SvelteDOMRemoveAttribute', { node, attribute });
+        else
+            dispatch_dev('SvelteDOMSetAttribute', { node, attribute, value });
+    }
+    function validate_each_argument(arg) {
+        if (typeof arg !== 'string' && !(arg && typeof arg === 'object' && 'length' in arg)) {
+            let msg = '{#each} only iterates over array-like objects.';
+            if (typeof Symbol === 'function' && arg && Symbol.iterator in arg) {
+                msg += ' You can use a spread to convert this iterable into an array.';
+            }
+            throw new Error(msg);
+        }
+    }
+    function validate_slots(name, slot, keys) {
+        for (const slot_key of Object.keys(slot)) {
+            if (!~keys.indexOf(slot_key)) {
+                console.warn(`<${name}> received an unexpected slot "${slot_key}".`);
+            }
+        }
+    }
+    /**
+     * Base class for Svelte components with some minor dev-enhancements. Used when dev=true.
+     */
+    class SvelteComponentDev extends SvelteComponent {
+        constructor(options) {
+            if (!options || (!options.target && !options.$$inline)) {
+                throw new Error("'target' is a required option");
+            }
+            super();
+        }
+        $destroy() {
+            super.$destroy();
+            this.$destroy = () => {
+                console.warn('Component was already destroyed'); // eslint-disable-line no-console
+            };
+        }
+        $capture_state() { }
+        $inject_state() { }
+    }
+
+    var data1 = [
+    	{
+    		Label: "stat0",
+    		Legend: "Von̄ dem guͦt daz koͧft ward von den Mùlner von Zurich diz ist als von den selben guͦt untz an die suͣ ✳ dn der nach stat ✳ Hartmann Muller ✳ git iii malterͣ ker en swin sol gelten ✳ v ✳ f xxx ✳ eyier Item Johannes̄ Scherzer iiii malterͣ",
+    		Coords: [
+    			-0.7463741898536682,
+    			1.6408809423446655,
+    			-0.9489734768867493
+    		]
+    	},
+    	{
+    		Label: "stat1",
+    		Legend: "ii fi Vo dez Mùliiz guͦt von Zurich von dem guͦt daz hie nach stat ✳ ze Sarmenstorf sol du eptissin Item ze Sarmenstorf",
+    		Coords: [
+    			-1.2432596683502197,
+    			1.7434635162353516,
+    			0.24499155580997467
+    		]
+    	},
+    	{
+    		Label: "stat2",
+    		Legend: "✳ und daz dis war si und stet belibe ✳ so geben wir disen brief unserr herschaft versigelt mit der stat insigel von Bruke ✳ sid wir niht eigen insigel haben",
+    		Coords: [
+    			1.4730240106582642,
+    			1.0938407182693481,
+    			-0.019849445670843124
+    		]
+    	},
+    	{
+    		Label: "stat3",
+    		Legend: "der vorgenanten lute bet ✳ haben unser stat insigel gehenket an disen brief ✳ ze einem offen urkunde ✳ der dingen die da vor geschriben stant",
+    		Coords: [
+    			2.6784493923187256,
+    			-0.3330732583999634,
+    			-0.26839956641197205
+    		]
+    	},
+    	{
+    		Label: "stat4",
+    		Legend: "oͧch des vorgenanden guͦtes des gnanden convenz rechter were vûr eigen und vogteige als da vorgeschriben stat an allen dien stetten da si werscheft bedurfen von mir oder minen erben✳",
+    		Coords: [
+    			-1.0097774267196655,
+    			-0.10090314596891403,
+    			2.454177141189575
+    		]
+    	},
+    	{
+    		Label: "stat5",
+    		Legend: "Chuͦnrad den schultheiss ✳ ✳ den rat und min buorger gemeinlich von Arowe daz si ir stat ingesigel ze einer gezûgsami dis koͧfes hant gehenckt an disen brief✳ Wir der Schultheiss",
+    		Coords: [
+    			2.013456344604492,
+    			0.2884417176246643,
+    			0.12911558151245117
+    		]
+    	},
+    	{
+    		Label: "stat6",
+    		Legend: "der rat und dû gemeinde vorgenande wan dir koͧf vor uns beschach und mit urteilde gevertgot wart nach nach unser stat gewonheit und rechte mit allen dien gedin̄gen als davor geschriben",
+    		Coords: [
+    			1.0492157936096191,
+    			-1.6573148965835571,
+    			0.12820087373256683
+    		]
+    	},
+    	{
+    		Label: "stat7",
+    		Legend: "stat dur bette des vorgenan Uͦlrich unsers burgers han wir gehencket unser stat ingesigel ze einer gezûgsami dis koͧfes und enkeinr werscheft anders sunderlich an disen",
+    		Coords: [
+    			-1.4408338069915771,
+    			-0.7561373710632324,
+    			-0.6320788264274597
+    		]
+    	},
+    	{
+    		Label: "stat8",
+    		Legend: "stat dur bette des vorgenan Uͦlrich unsers burgers han wir gehencket unser stat ingesigel ze einer gezûgsami dis koͧfes und enkeinr werscheft anders sunderlich an disen",
+    		Coords: [
+    			-1.4408338069915771,
+    			-0.7561373710632324,
+    			-0.6320788264274597
+    		]
+    	},
+    	{
+    		Label: "stat9",
+    		Legend: "stat hat gewert und ez in minen nutz han bekeret dez ich offenlich vergihe an disem briefe ✳ da von vergih oͧch ich ✳ daz ich",
+    		Coords: [
+    			-1.3330672979354858,
+    			-1.163061261177063,
+    			-0.45510628819465637
+    		]
+    	}
+    ];
+
+    var data2 = [
+    	{
+    		Label: "burg0",
+    		Legend: "Schenko ✳ R✳ Vinsler ✳ R✳ Sauenwiler ✳ burger ✳ ze Brugge ✳ Dietrich von Lenzeburg burg ✳ und andˀ erbˀ lùte genuͦg✳ ✳ ✳ ✳ Königsfelden",
+    		Coords: [
+    			1.3866446018218994,
+    			0.23537586629390717,
+    			-0.07335907965898514
+    		]
+    	},
+    	{
+    		Label: "burg1",
+    		Legend: "uf den guͤtern in dem Aygen ze Prukke ✳ uf dem Poͤz perg und anderswo als die brief sagent die der vorgnant unser oheim von Nellem - burg ✳ von",
+    		Coords: [
+    			0.5401713848114014,
+    			0.4722857177257538,
+    			0.20878253877162933
+    		]
+    	},
+    	{
+    		Label: "burg2",
+    		Legend: "darzuͤ verzigen si sich geistliches und welthes gerichtes ✳ gewonheit der stete und des landes fries rechtes burg rechtes und gemeinlich ✳ aller der dinge da mite",
+    		Coords: [
+    			-1.4340101480484009,
+    			1.8495968580245972,
+    			0.46855592727661133
+    		]
+    	},
+    	{
+    		Label: "burg3",
+    		Legend: "Allen den die disen brief ansehent oder hoͤrent lesen nu oder hie nach ✳ kûnden wir Johans Scherer schult heis ze der Nûwen Regensperg ✳ und die burger ✳ die ze der selben burg",
+    		Coords: [
+    			-0.3535294532775879,
+    			0.16077731549739838,
+    			-1.1568984985351562
+    		]
+    	},
+    	{
+    		Label: "burg4",
+    		Legend: "den grûnden ✳ in aller der weise ✳ alz unser getruwe ✳ bruͤder Peter von Stoffeln ✳ cômentûr ze Tannenfels Hug von Guͤten burg ✳ Wernher Truchsêtz von Rinvelden und Heinrich von Rinach ✳ sundernt und usscheident ✳ und under marksteinent",
+    		Coords: [
+    			1.4372605085372925,
+    			0.34989869594573975,
+    			0.6543382406234741
+    		]
+    	},
+    	{
+    		Label: "burg5",
+    		Legend: "✳ und von Uͦlrichen und Albrechten iren sunen✳ ein holtz genant ✳ die Eichals ✳ gelegen under unser burg Habsburg ✳ dasselb holtz und uns lehen ist ✳ daz wir zuͦ demselben kouffe ✳ unsern gunst und willen geben haben und",
+    		Coords: [
+    			-1.259008526802063,
+    			0.005437659565359354,
+    			-0.7085812091827393
+    		]
+    	},
+    	{
+    		Label: "burg6",
+    		Legend: "Königsfelden 333 wist umb j hus zuͦ Lentzbùrg ✳ K H 8 Staatsarchiv AARGAU 366 ✳ diz ist der prieff von dez huss wegenze Lentz burg ✳",
+    		Coords: [
+    			1.2450711727142334,
+    			0.044222552329301834,
+    			-0.09669719636440277
+    		]
+    	},
+    	{
+    		Label: "burg7",
+    		Legend: "den burg graben ze Habspurg den Ruͤdi Engelman buwet und gechdiet in daz burglehen ze Habspurg und der egenannten miner herrschaft von Oͤsterreich ledig ✳ worden ist von Heintzhn",
+    		Coords: [
+    			-1.0010827779769897,
+    			-1.1347391605377197,
+    			1.8226169347763062
+    		]
+    	},
+    	{
+    		Label: "burg8",
+    		Legend: "den lebenden ✳ und geben ouch in dem namen als davor wissentlich mit disem briefe ✳ fùr frye ledig eigen ✳ den frânwalt ✳ und das holtz ✳ gelegen under der burg ze Brunegg ✳ in Ergoͤw ✳ das man von alter nennet den Hag",
+    		Coords: [
+    			-0.6308287382125854,
+    			-0.8256052136421204,
+    			-0.6310507655143738
+    		]
+    	},
+    	{
+    		Label: "burg9",
+    		Legend: "und des ze urkùnd so henk ich der obgenanten lantvogt min eygen ingesigel an disen brief der geben ist ze Baden uff der burg an sant Margereten tag ✳ do man zalt von cristus gebùrt drùhundert ✳ eins und achtzig jar",
+    		Coords: [
+    			0.06931150704622269,
+    			-1.1572494506835938,
+    			-0.48770710825920105
+    		]
+    	}
+    ];
+
+    var data3 = [
+    	{
+    		Label: "schriben0",
+    		Legend: "✳ daz dis allez daz hie vor ge- schriben ist ✳ stête belibe ✳ dar uber geben wir disen brief ✳ versigelt ✳ mit ûnserm insigel ✳ und mit dem insigel bruͦder Heinrich von Talhein der ze den ziten",
+    		Coords: [
+    			2.057774543762207,
+    			0.20136170089244843,
+    			0.5314192771911621
+    		]
+    	},
+    	{
+    		Label: "schriben1",
+    		Legend: "vorge- schriben guͦter ✳ nùzze ✳ und ✳ rehte ze beiden dorfren ✳ gar ✳ und genzlich wider geben ze loͤsende ✳ umb ✳ drissig ✳ mark",
+    		Coords: [
+    			-0.38930603861808777,
+    			2.2972381114959717,
+    			-0.2487945407629013
+    		]
+    	},
+    	{
+    		Label: "schriben2",
+    		Legend: "geistlicher froͧwen stat ze ire und ze ir nachkomen ✳ haͤnden dis nach ✳ ge- schriben gelt ✳ das lidig eigen ist und oͧch da fùr verkoͧft ist ✳ vier mùtt roggen ✳ ein malter habern ✳ ein halb swin sol oͧch ein",
+    		Coords: [
+    			0.8916307687759399,
+    			0.03158307075500488,
+    			0.14593303203582764
+    		]
+    	},
+    	{
+    		Label: "schriben3",
+    		Legend: "wolt oder enmoͤht der sol und mach einen andern erbern knecht in die vorgenannte giselschaft schriben und legen der an siner stat ze glicher",
+    		Coords: [
+    			-0.6792559027671814,
+    			-0.2869804799556732,
+    			0.8405468463897705
+    		]
+    	},
+    	{
+    		Label: "schriben4",
+    		Legend: "und sinen bruͦder schriben mir järzitbuͦch und inen ir jarzitt began jerlich und ewenklich disen obgeschribenen spruch habend beid teil jetwedrer fùr sich und die sinen gelobt und verheissen by trùw an",
+    		Coords: [
+    			-1.4592193365097046,
+    			-0.5030133128166199,
+    			1.7447373867034912
+    		]
+    	},
+    	{
+    		Label: "schriben5",
+    		Legend: "ùch darumb schriben das ich hoften ir kemind àn verzichen denn wir ân ùch als unseren oberen zù den sachen nitt geantwurten koͤnden noch zetüend wisten ✳ meinten si nitt getùn koͤnden sunder",
+    		Coords: [
+    			-0.3245996832847595,
+    			-0.5933279991149902,
+    			-0.61163330078125
+    		]
+    	},
+    	{
+    		Label: "schriben6",
+    		Legend: "schriben lassen das si und irn teil der gùlt von junckher Albrecht von Rinach verwist stent nach innhalt disz briefs etcꝭ und die vi mütt kernengelts ist dahar ✳ bisz uff",
+    		Coords: [
+    			-0.9310423135757446,
+    			0.9522505402565002,
+    			-0.697503924369812
+    		]
+    	},
+    	{
+    		Label: "schriben7",
+    		Legend: "und hieruff zuͦ merer sicherheit aller vor und nachgeschriben dingen ✳ so von uns an disen brieff ver⁊ schriben stàn ✳ so haben wir ✳ den vilgnannten unsern",
+    		Coords: [
+    			1.3339762687683105,
+    			-0.23611211776733398,
+    			0.29407060146331787
+    		]
+    	},
+    	{
+    		Label: "schriben8",
+    		Legend: "ze Brugg die mich mitt Hansen Zuͦloͧf iren dickgenannten ir zuͦ vogt geben hand soͤlich des Stapfers angeben und schrift vorgemeldether in schriben lassen und anstatt und fùr als vor stat gelopt ✳ soͤlich lichen und",
+    		Coords: [
+    			-0.10398373752832413,
+    			-0.7050529718399048,
+    			-0.8058676719665527
+    		]
+    	},
+    	{
+    		Label: "schriben9",
+    		Legend: "✳und her in schriben und setzen laͤssen ✳ ✳ item des ersten ein gross acker ist der lùtpreistrye widen hat vor Hansz Geiszlier umb den landteil litt an dem kilchweg",
+    		Coords: [
+    			-0.3959745168685913,
+    			-1.1579471826553345,
+    			-1.1929081678390503
+    		]
+    	}
+    ];
+
+    /* src\App.svelte generated by Svelte v3.35.0 */
+    const file = "src\\App.svelte";
+
+    function get_each_context(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[14] = list[i];
+    	child_ctx[15] = list;
+    	child_ctx[16] = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[17] = list[i];
+    	return child_ctx;
+    }
+
+    // (91:4) {#each dataset as point (point.Label)}
+    function create_each_block_1(key_1, ctx) {
+    	let tr;
+    	let td0;
+    	let t0_value = /*point*/ ctx[17].Label + "";
+    	let t0;
+    	let t1;
+    	let td1;
+    	let t2_value = /*point*/ ctx[17].Legend + "";
+    	let t2;
+    	let t3;
+    	let mounted;
+    	let dispose;
+
+    	function mouseenter_handler() {
+    		return /*mouseenter_handler*/ ctx[6](/*point*/ ctx[17], /*index*/ ctx[16], /*dataset*/ ctx[14]);
+    	}
+
+    	function mouseleave_handler() {
+    		return /*mouseleave_handler*/ ctx[7](/*point*/ ctx[17], /*index*/ ctx[16], /*dataset*/ ctx[14]);
+    	}
+
+    	const block = {
+    		key: key_1,
+    		first: null,
+    		c: function create() {
+    			tr = element("tr");
+    			td0 = element("td");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			td1 = element("td");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			attr_dev(td0, "class", "svelte-11xc8po");
+    			add_location(td0, file, 92, 6, 3641);
+    			attr_dev(td1, "class", "svelte-11xc8po");
+    			add_location(td1, file, 93, 6, 3671);
+    			attr_dev(tr, "id", /*point*/ ctx[17].Label);
+    			attr_dev(tr, "class", "svelte-11xc8po");
+    			toggle_class(tr, "selected", /*point*/ ctx[17].Label === /*selectedItem*/ ctx[1]);
+    			add_location(tr, file, 91, 5, 3420);
+    			this.first = tr;
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, tr, anchor);
+    			append_dev(tr, td0);
+    			append_dev(td0, t0);
+    			append_dev(tr, t1);
+    			append_dev(tr, td1);
+    			append_dev(td1, t2);
+    			append_dev(tr, t3);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(tr, "mouseenter", mouseenter_handler, false, false, false),
+    					listen_dev(tr, "mouseleave", mouseleave_handler, false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+
+    			if (dirty & /*data, selectedItem*/ 6) {
+    				toggle_class(tr, "selected", /*point*/ ctx[17].Label === /*selectedItem*/ ctx[1]);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(tr);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1.name,
+    		type: "each",
+    		source: "(91:4) {#each dataset as point (point.Label)}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (84:1) {#each data as dataset, index}
+    function create_each_block(ctx) {
+    	let div1;
+    	let table;
+    	let tr;
+    	let th0;
+    	let t1;
+    	let th1;
+    	let t3;
+    	let each_blocks = [];
+    	let each_1_lookup = new Map();
+    	let t4;
+    	let div0;
+    	let index = /*index*/ ctx[16];
+    	let t5;
+    	let each_value_1 = /*dataset*/ ctx[14];
+    	validate_each_argument(each_value_1);
+    	const get_key = ctx => /*point*/ ctx[17].Label;
+    	validate_each_keys(ctx, each_value_1, get_each_context_1, get_key);
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		let child_ctx = get_each_context_1(ctx, each_value_1, i);
+    		let key = get_key(child_ctx);
+    		each_1_lookup.set(key, each_blocks[i] = create_each_block_1(key, child_ctx));
+    	}
+
+    	const assign_div0 = () => /*div0_binding*/ ctx[8](div0, index);
+    	const unassign_div0 = () => /*div0_binding*/ ctx[8](null, index);
+
+    	const block = {
+    		c: function create() {
+    			div1 = element("div");
+    			table = element("table");
+    			tr = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "Label";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Sentence";
+    			t3 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t4 = space();
+    			div0 = element("div");
+    			t5 = space();
+    			add_location(th0, file, 87, 5, 3320);
+    			add_location(th1, file, 88, 5, 3341);
+    			add_location(tr, file, 86, 4, 3309);
+    			add_location(table, file, 85, 3, 3296);
+    			attr_dev(div0, "id", `viz${/*index*/ ctx[16]}`);
+    			attr_dev(div0, "class", "viz");
+    			add_location(div0, file, 97, 3, 3737);
+    			attr_dev(div1, "class", "container svelte-11xc8po");
+    			add_location(div1, file, 84, 2, 3268);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, table);
+    			append_dev(table, tr);
+    			append_dev(tr, th0);
+    			append_dev(tr, t1);
+    			append_dev(tr, th1);
+    			append_dev(table, t3);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(table, null);
+    			}
+
+    			append_dev(div1, t4);
+    			append_dev(div1, div0);
+    			assign_div0();
+    			append_dev(div1, t5);
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+
+    			if (dirty & /*data, selectedItem, selectPoint, canvas, deselectPoint*/ 55) {
+    				each_value_1 = /*dataset*/ ctx[14];
+    				validate_each_argument(each_value_1);
+    				validate_each_keys(ctx, each_value_1, get_each_context_1, get_key);
+    				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value_1, each_1_lookup, table, destroy_block, create_each_block_1, null, get_each_context_1);
+    			}
+
+    			if (index !== /*index*/ ctx[16]) {
+    				unassign_div0();
+    				index = /*index*/ ctx[16];
+    				assign_div0();
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div1);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].d();
+    			}
+
+    			unassign_div0();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block.name,
+    		type: "each",
+    		source: "(84:1) {#each data as dataset, index}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment(ctx) {
+    	let script;
+    	let script_src_value;
+    	let t0;
+    	let main;
+    	let h1;
+    	let t2;
+    	let p;
+    	let t4;
+    	let mounted;
+    	let dispose;
+    	let each_value = /*data*/ ctx[2];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			script = element("script");
+    			t0 = space();
+    			main = element("main");
+    			h1 = element("h1");
+    			h1.textContent = "Visualizing Language Models";
+    			t2 = space();
+    			p = element("p");
+    			p.textContent = "Language models (e.g. character embeddings) are essential to succeed in NLP tasks. Especially when it comes to Part-of-Speech and Named Entity Recognition, tasks result in more precise models if supported by adequate language models already. Since the advent of word2vec and large transformer-based language models (such as BERT or GPT-3) a variety of specialized and fine-tuned language models is currently available. Despite the widespread use and the necessity when it comes to specific model training (e.g. for language entities with only sparse data), our understanding of the models themselves is limited at best. In order to strengthen our understanding of language models and to start the process of reflecting them, this challenge asks for creative ways of visualizing language models. We envision 3D-visualizations based on dimension reduction to identify the positioning of e.g. synonym/homonyms in vector spaces or listing of semantic fields (neighboring vector values). For context insensitive approaches (e.g. word2vec or GloVe) we imagine to use the fixed vectors and represent calculations in grids.";
+    			t4 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			if (script.src !== (script_src_value = "https://cdn.plot.ly/plotly-latest.min.js")) attr_dev(script, "src", script_src_value);
+    			add_location(script, file, 77, 1, 1953);
+    			attr_dev(h1, "class", "svelte-11xc8po");
+    			add_location(h1, file, 81, 1, 2070);
+    			add_location(p, file, 82, 1, 2109);
+    			attr_dev(main, "class", "svelte-11xc8po");
+    			add_location(main, file, 80, 0, 2061);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			append_dev(document.head, script);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, main, anchor);
+    			append_dev(main, h1);
+    			append_dev(main, t2);
+    			append_dev(main, p);
+    			append_dev(main, t4);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(main, null);
+    			}
+
+    			if (!mounted) {
+    				dispose = listen_dev(script, "load", /*initializeViz*/ ctx[3], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*canvas, data, selectedItem, selectPoint, deselectPoint*/ 55) {
+    				each_value = /*data*/ ctx[2];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(main, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			detach_dev(script);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(main);
+    			destroy_each(each_blocks, detaching);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots("App", slots, []);
+    	let canvas = [];
+    	let selectedItem = "";
+    	const data = [data1, data2, data3]; // create data Object from JSONs
+
+    	const traceOptions = {
+    		//static Option for each trace
+    		marker: {
+    			size: 12,
+    			line: {
+    				color: "rgba(217, 217, 217, 0.14)",
+    				width: 0.5
+    			},
+    			opacity: 0.8
+    		},
+    		mode: "markers",
+    		type: "scatter3d",
+    		hovertemplate: "%{text}<extra></extra>",
+    		showLegend: false
+    	};
+
+    	const createTrace = (points, name, options) => {
+    		//create a trace from point-data
+    		return {
+    			x: points.map(o => o.Coords[0]),
+    			y: points.map(o => o.Coords[1]),
+    			z: points.map(o => o.Coords[2]),
+    			text: [...points.map(o => o.Label)],
+    			name,
+    			...options
+    		};
+    	};
+
+    	const traces = data.map((d, i) => createTrace(d, `Dataset ${i}`, traceOptions)); //create a trace for each dataset
+
+    	const layout = {
+    		hovermode: "closest",
+    		margin: { l: 0, r: 0, b: 0, t: 0 }
+    	};
+
+    	const initializeViz = () => {
+    		//initialization method
+    		traces.forEach((trace, index) => {
+    			Plotly.newPlot(canvas[index], [trace], layout, { showSendToCloud: true });
+    			canvas[index].on("plotly_hover", vizHover);
+    			canvas[index].on("plotly_unhover", () => $$invalidate(1, selectedItem = ""));
+    		});
+    	};
+
+    	function vizHover(event) {
+    		if (selectedItem !== event.points[0].text) {
+    			$$invalidate(1, selectedItem = event.points[0].text);
+    		}
+    	}
+
+    	const selectPoint = (point, canvasRef, dataRef) => {
+    		let index = dataRef.map(o => o.Label).indexOf(point);
+    		let colorArray = new Array(dataRef.length).fill("grey");
+    		colorArray[index] = "red";
+    		Plotly.restyle(canvasRef, "marker.color", [colorArray]);
+    	};
+
+    	const deselectPoint = (point, canvasRef, dataRef) => {
+    		let colorArray = new Array(dataRef.length).fill("blue");
+    		Plotly.restyle(canvasRef, "marker.color", [colorArray]);
+    	};
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<App> was created with unknown prop '${key}'`);
+    	});
+
+    	const mouseenter_handler = (point, index, dataset) => selectPoint(point.Label, canvas[index], dataset);
+    	const mouseleave_handler = (point, index, dataset) => deselectPoint(point.Label, canvas[index], dataset);
+
+    	function div0_binding($$value, index) {
+    		binding_callbacks[$$value ? "unshift" : "push"](() => {
+    			canvas[index] = $$value;
+    			$$invalidate(0, canvas);
+    		});
+    	}
+
+    	$$self.$capture_state = () => ({
+    		data1,
+    		data2,
+    		data3,
+    		canvas,
+    		selectedItem,
+    		data,
+    		traceOptions,
+    		createTrace,
+    		traces,
+    		layout,
+    		initializeViz,
+    		vizHover,
+    		selectPoint,
+    		deselectPoint
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("canvas" in $$props) $$invalidate(0, canvas = $$props.canvas);
+    		if ("selectedItem" in $$props) $$invalidate(1, selectedItem = $$props.selectedItem);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		canvas,
+    		selectedItem,
+    		data,
+    		initializeViz,
+    		selectPoint,
+    		deselectPoint,
+    		mouseenter_handler,
+    		mouseleave_handler,
+    		div0_binding
+    	];
+    }
+
+    class App extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance, create_fragment, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "App",
+    			options,
+    			id: create_fragment.name
+    		});
+    	}
+    }
+
+    const app = new App({
+    	target: document.body,
+    });
+
+    return app;
+
+}());
 //# sourceMappingURL=bundle.js.map
