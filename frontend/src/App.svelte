@@ -1,7 +1,7 @@
 <script>
-	import data from './test.json';
-	import data2 from './test.json';
-	import data3 from './test.json';
+	import data from './input1.json';
+	import data2 from './input2.json';
+	import data3 from './input3.json';
 
 
 	const trace1 = {
