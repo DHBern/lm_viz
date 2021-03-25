@@ -1,0 +1,12 @@
+[
+  {
+    "label": "Point 1",
+    "legend": "Point 1 Legend",
+    "coords": [1,1,1]
+  },
+  {
+    "label": "Point 2",
+    "legend": "Point 2 Legend",
+    "coords": [1,3,1]
+  }
+]

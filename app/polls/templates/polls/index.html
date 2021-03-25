@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NLP Hackathon Challenge 4</title>
+  </head>
+  <body>
+    <h1>Challenge 4: Visualization of NLP Models</h1>
+    {% if user_input %}
+      <div>{{user_input}}</div>
+    {% endif %}
+    {% if plot %}
+      <h2>Your Plot:</h2>
+      {{ plot | safe}}
+    {% endif %}
+  </body>
+</html>
