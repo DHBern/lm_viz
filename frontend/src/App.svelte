@@ -37,12 +37,12 @@
 
 	const initializeViz = () => {
 		Plotly.newPlot(canvas, [trace1], layout, {showSendToCloud: true});
-		let myPlot = document.getElementById('myDiv')
-		myPlot.on('plotly_hover', vizHover)
-		myPlot.on('plotly_unhover', vizUnhover)
+		canvas.on('plotly_hover', vizHover)
+		canvas.on('plotly_unhover', vizUnhover)
 	}
 
 	function vizHover(event) {
+		console.log(event)
 		if (selectedItem !== event.points[0].text){
 			selectedItem = event.points[0].text;
 		}
@@ -50,6 +50,18 @@
 
 	function vizUnhover(event) {
 		selectedItem = "";
+	}
+
+	const selectPoint = (point) => {
+		let index = data.map(o => o.Label).indexOf(point);
+		let colorArray = new Array(data.length).fill("grey");
+		colorArray[index] = "red";
+		Plotly.restyle('myDiv', 'marker.color', [colorArray]);
+	}
+
+	const deselectPoint = (point) => {
+		let colorArray = new Array(data.length).fill('blue');
+		Plotly.restyle('myDiv', 'marker.color', [colorArray]);
 	}
 
 </script>
@@ -67,7 +79,7 @@
 				<th>Sentence</th>
 			</tr>
 			{#each data as point (point.Label)}
-				<tr id="{point.Label}" class:selected={point.Label === selectedItem}>
+				<tr id="{point.Label}" class:selected={point.Label === selectedItem} on:mouseenter={() => selectPoint(point.Label)} on:mouseleave={() => deselectPoint(point.Label)}>
 					<td>{point.Label}</td>
 					<td>{point.Legend}</td>
 				</tr>
