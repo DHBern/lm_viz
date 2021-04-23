@@ -10,6 +10,7 @@ We envision 3D-visualizations based on dimension reduction to identify the posit
 For context insensitive approaches (e.g. word2vec or GloVe) we imagine to use the fixed vectors and represent calculations in grids.
 
 <h2>Goals of the Repository</h2>
+See our poster for Bern Data Science Day.
 
 <h2>Description of Pipeline</h2>
 ToDo
